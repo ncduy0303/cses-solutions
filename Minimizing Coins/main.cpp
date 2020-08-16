@@ -38,7 +38,7 @@ void solve() {
         }
     }
     if (dp[x] == INF) dp[x] = -1;
-    cout << dp[x];
+    cout << dp[x] << "\n";
 }
 
 int main() {

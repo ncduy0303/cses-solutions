@@ -30,13 +30,13 @@ typedef vector<vi> vvi;
 void solve() {
     int n; cin >> n;
     if (1 < n && n < 4) {
-        cout << "NO SOLUTION";
+        cout << "NO SOLUTION\n";
         return;
     }
     vector<int> ans;
-    for (int i = 2; i <= n; i += 2) ans.push_back(i);
-    for (int i = 1; i <= n; i += 2) ans.push_back(i);
-    for (int x : ans) cout << x << " ";
+    for (int i = 2; i <= n; i += 2) cout << i << " ";
+    for (int i = 1; i <= n; i += 2) cout << i << " ";
+    cout << "\n";
 }
 
 int main() {

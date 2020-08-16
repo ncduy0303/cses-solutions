@@ -33,7 +33,7 @@ void solve() {
             (dp[j] += dp[i]) %= MOD;
         }
     }
-    cout << dp[n];
+    cout << dp[n] << "\n";
 }
 
 int main() {

@@ -36,7 +36,7 @@ void solve() {
             (dp[j + arr[i]] += dp[j]) %= MOD;
         }
     }
-    cout << dp[x];
+    cout << dp[x] << "\n";
 }
 
 int main() {

@@ -33,7 +33,7 @@ void solve() {
         if (it == dp.end()) dp.push_back(x);
         else *it = x;
     }
-    cout << dp.size();
+    cout << dp.size() << "\n";
 }
 
 int main() {

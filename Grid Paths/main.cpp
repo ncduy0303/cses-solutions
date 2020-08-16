@@ -38,7 +38,7 @@ void solve() {
             dp[i][j] = (i == 1 && j == 1) ? 1 : (dp[i - 1][j] + dp[i][j - 1]) % MOD;
         }
     }
-    cout << dp[n][n];
+    cout << dp[n][n] << "\n";
 }
 
 int main() {

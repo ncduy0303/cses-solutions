@@ -31,7 +31,7 @@ void solve() {
         int x; cin >> x;
         s.insert(x);
     }
-    cout << s.size();
+    cout << s.size() << "\n";
 }
 
 int main() {

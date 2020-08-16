@@ -29,7 +29,7 @@ void solve() {
     int ans = 0;
     for (int i = 5; i <= n; i *= 5)
         ans += n / i;
-    cout << ans;
+    cout << ans << "\n";
 }
 
 int main() {

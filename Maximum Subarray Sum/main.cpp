@@ -41,7 +41,7 @@ void solve() {
         cur = max(cur + arr[i], 0ll);
         ans = max(ans, cur);
     }
-    cout << ans;
+    cout << ans << "\n";
 }
 
 int main() {

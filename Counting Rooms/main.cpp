@@ -54,7 +54,7 @@ void solve() {
             }
         }
     }
-    cout << ans;
+    cout << ans << "\n";
 }
 
 int main() {

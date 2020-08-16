@@ -50,7 +50,7 @@ void solve() {
         }
     }
     place(0);
-    cout << ans;
+    cout << ans << "\n";
 }
  
 int main() {

@@ -44,6 +44,7 @@ void solve() {
     for (int i = 1; i <= n; i++) {
         cout << num_child[i] << " ";
     }
+    cout << "\n";
 }
 
 int main() {

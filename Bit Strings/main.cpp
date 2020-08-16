@@ -32,7 +32,7 @@ ll qexp(ll A, ll B, ll M) { // return A^B MOD M
  
 void solve() {
     int n; cin >> n;
-    cout << qexp(2, n, MOD);
+    cout << qexp(2, n, MOD) << "\n";
 }
 
 int main() {

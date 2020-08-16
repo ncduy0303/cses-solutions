@@ -35,7 +35,7 @@ void solve() {
             dp[i - j] = min(dp[i - j], dp[i] + 1);
         }
     }
-    cout << dp[0];
+    cout << dp[0] << "\n";
 }
 
 int main() {

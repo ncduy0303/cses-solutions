@@ -25,19 +25,29 @@ typedef vector<vi> vvi;
 
 
 void solve() {
-    int n, x; cin >> n >> x;
-    int h[n], s[n];
-    for (int i = 0; i < n; i++) cin >> h[i];
-    for (int i = 0; i < n; i++) cin >> s[i];
-    int dp[x + 1] = {0};
-    for (int i = 0; i < n; i++) {
-        for (int j = x; j >= h[i]; j--) {
-            dp[j] = max(dp[j], dp[j - h[i]] + s[i]);
+    ll n; cin >> n;
+    if (n * (n + 1) % 4) {
+        cout << "NO\n";
+        return;
+    }
+    ll sum = n * (n + 1) / 4;
+    vi a, b;
+    // greedy approach
+    for (int i = n; i >= 1; i--) {
+        if (sum >= i) {
+            sum -= i;
+            a.push_back(i);
+        }
+        else {
+            b.push_back(i);
         }
     }
-    int ans = 0;
-    for (int i = 0; i <= x; i++) ans = max(ans, dp[x]);
-    cout << ans << "\n";
+    cout << "YES";
+    cout << "\n" << a.size() << "\n";
+    for (int x : a) cout << x << " ";
+    cout << "\n" << b.size() << "\n";
+    for (int x : b) cout << x << " ";
+    cout << "\n";
 }
 
 int main() {

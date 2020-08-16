@@ -27,10 +27,10 @@ typedef vector<vi> vvi;
 void solve() {
     string s; cin >> s;
     int ans = 0;
-    for (int i = 0; i < (int)s.size();) {
+    for (int i = 0; i < s.size(); i++) {
         int j = i;
-        while (j < (int)s.size() && s[j] == s[i]) j++;
-        ans = max(ans, j - i);
+        while (j < s.size() - 1 && s[j + 1] == s[i]) j++;
+        ans = max(ans, j - i + 1);
         i = j;
     }
     cout << ans << "\n";
