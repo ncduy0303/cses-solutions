@@ -51,11 +51,11 @@ void update(int node, int start, int end, int idx, int val) {
 }
 
 int query(int node, int start, int end, int l, int r) {
-    if (l > r) return INF;
-    if (start == l && end == r) return st[node];
+    if (start > r || end < l) return INF;
+    if (l <= start && end <= r) return st[node];
     int mid = (start + end) / 2;
-    return min(query(2 * node, start, mid, l, min(r, mid)),
-               query(2 * node + 1, mid + 1, end, max(l, mid + 1), r));
+    return min(query(2 * node, start, mid, l, r),
+               query(2 * node + 1, mid + 1, end, l, r));
 }
 
 void solve() {

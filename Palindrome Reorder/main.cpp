@@ -22,16 +22,33 @@ typedef vector<vi> vvi;
 #define LSOne(S) (S & (-S))
 #define isBitSet(S, i) ((S >> i) & 1)
 
+
+
 void solve() {
-	int n; cin >> n;
-    vi dp;
-    for (int i = 0; i < n; i++) {
-        int x; cin >> x;
-        auto it = lower_bound(dp.begin(), dp.end(), x);
-        if (it == dp.end()) dp.push_back(x);
-        else *it = x;
+    string s; cin >> s;
+    vi cnt(26, 0);
+    int odd = -1;
+    for (char c : s) cnt[c - 'A']++;
+    for (int i = 0; i < 26; i++) {
+        if (cnt[i] % 2) {
+            if (odd == -1) odd = i;
+            else {
+                cout << "NO SOLUTION\n";
+                return;
+            }
+        }
     }
-    cout << dp.size() << "\n";
+    string ans = "";
+    if (odd != -1) 
+        for (int i = 0; i < cnt[odd]; i++) 
+            ans += (char)(odd + 'A');
+    for (int i = 0; i < 26; i++) {
+        if (i == odd) continue;
+		string tmp = "";
+        for (int j = 0; j < cnt[i] / 2; j++) tmp += (char)(i + 'A');
+        ans = tmp + ans + tmp;
+    }
+    cout << ans << "\n";
 }
 
 int main() {

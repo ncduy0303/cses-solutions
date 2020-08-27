@@ -22,23 +22,19 @@ typedef vector<vi> vvi;
 #define LSOne(S) (S & (-S))
 #define isBitSet(S, i) ((S >> i) & 1)
 
-
-
 void solve() {
-    int n; cin >> n;
-    char grid[n + 1][n + 1];
-    for (int i = 1; i <= n; i++)
-        for (int j = 1; j <= n; j++)
-            cin >> grid[i][j];
-    int dp[n + 1][n + 1];
-    memset(dp, 0, sizeof dp);
-    for (int i = 1; i <= n; i++) {
-        for (int j = 1; j <= n; j++) {
-            if (grid[i][j] == '*') continue;
-            dp[i][j] = (i == 1 && j == 1) ? 1 : (dp[i - 1][j] + dp[i][j - 1]) % MOD;
-        }
+    int n, x; cin >> n >> x;
+    int p[n];
+    for (int i = 0; i < n; i++) cin >> p[i];
+    sort(p, p + n);
+
+    int ans = 0, i = 0, j = n - 1;
+    while (i <= j) {
+        if (p[i] + p[j] > x) j--;
+        else i++, j--;
+        ans++;
     }
-    cout << dp[n][n] << "\n";
+    cout << ans << "\n"; 
 }
 
 int main() {

@@ -23,15 +23,20 @@ typedef vector<vi> vvi;
 #define isBitSet(S, i) ((S >> i) & 1)
 
 void solve() {
-	int n; cin >> n;
-    vi dp;
-    for (int i = 0; i < n; i++) {
-        int x; cin >> x;
-        auto it = lower_bound(dp.begin(), dp.end(), x);
-        if (it == dp.end()) dp.push_back(x);
-        else *it = x;
+    int n, m, k; cin >> n >> m >> k;
+    int a[n], b[m];
+    for (int i = 0; i < n; i++) cin >> a[i];
+    for (int i = 0; i < m; i++) cin >> b[i];
+    sort(a, a + n);
+    sort(b, b + m);
+    
+    int ans = 0, i = 0, j = 0;
+    while (i < n && j < m) {
+        if (b[j] < a[i] - k) j++;
+        else if (b[j] > a[i] + k) i++;
+        else i++, j++, ans++;
     }
-    cout << dp.size() << "\n";
+    cout << ans << "\n";
 }
 
 int main() {

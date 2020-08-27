@@ -23,15 +23,21 @@ typedef vector<vi> vvi;
 #define isBitSet(S, i) ((S >> i) & 1)
 
 void solve() {
-	int n; cin >> n;
-    vi dp;
+    int n, m; cin >> n >> m;
+    multiset<int, greater<int>> ms;
     for (int i = 0; i < n; i++) {
         int x; cin >> x;
-        auto it = lower_bound(dp.begin(), dp.end(), x);
-        if (it == dp.end()) dp.push_back(x);
-        else *it = x;
+        ms.insert(x);
     }
-    cout << dp.size() << "\n";
+    for (int i = 0; i < m; i++) {
+        int x; cin >> x;
+        auto it = ms.lower_bound(x);
+        if (it == ms.end()) cout << -1 << "\n";
+        else {
+            cout << *it << "\n";
+            ms.erase(it);
+        }
+    }
 }
 
 int main() {

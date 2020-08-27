@@ -23,35 +23,35 @@ typedef vector<vi> vvi;
 #define isBitSet(S, i) ((S >> i) & 1)
 
 int N, Q;
-int arr[MAX_N], st[4 * MAX_N];
-
-void build(int node, int start, int end) {
-    if (start == end) {
-        st[node] = arr[start];
-    }
-    else {
-        int mid = (start + end) / 2;
-        build(2 * node, start, mid);
-        build(2 * node + 1, mid + 1, end);
-        st[node] = st[2 * node] ^ st[2 * node + 1];
-    }
+int arr[MAX_N], dp[MAX_N][MAX_L];
+ 
+void build_sparse_table() {
+    for (int i = 1; i <= N; i++)
+        dp[i][0] = arr[i];
+    for (int j = 1; j < MAX_L; j++) 
+        for (int i = 1; i + (1 << j) <= N + 1; i++)
+            dp[i][j] = dp[i][j - 1] ^ dp[i + (1 << (j - 1))][j - 1];
 }
 
-int query(int node, int start, int end, int l, int r) {
-    if (l > r) return 0;
-    if (start == l && end == r) return st[node];
-    int mid = (start + end) / 2;
-    return query(2 * node, start, mid, l, min(r, mid)) ^ 
-           query(2 * node + 1, mid + 1, end, max(l, mid + 1), r);
+int query(int a, int b) {
+    int k = b - a + 1;
+    int sum = 0;
+    for (int i = 0; i < MAX_L; i++) {
+        if (k & (1 << i)) {
+            sum ^= dp[a][i];
+            a += (1 << i);
+        }
+    }
+    return sum;
 }
-
+ 
 void solve() {
     cin >> N >> Q;
     for (int i = 1; i <= N; i++) cin >> arr[i];
-    build(1, 1, N);
+    build_sparse_table();
     while (Q--) {
         int a, b; cin >> a >> b;
-        cout << query(1, 1, N, a, b) << "\n";
+        cout << query(a, b) << "\n";
     }
 }
 

@@ -22,16 +22,30 @@ typedef vector<vi> vvi;
 #define LSOne(S) (S & (-S))
 #define isBitSet(S, i) ((S >> i) & 1)
 
-void solve() {
-	int n; cin >> n;
-    vi dp;
-    for (int i = 0; i < n; i++) {
-        int x; cin >> x;
-        auto it = lower_bound(dp.begin(), dp.end(), x);
-        if (it == dp.end()) dp.push_back(x);
-        else *it = x;
+// N is small, so backtracking is possible
+
+int N;
+ll arr[20], ans, total;
+
+void backtrack(int idx = 0, ll sum = 0) {
+    if (idx == N) {
+        ll diff = abs(total - 2 * sum);
+        ans = min(ans , diff);
+        return;
     }
-    cout << dp.size() << "\n";
+    backtrack(idx + 1, sum);
+    backtrack(idx + 1, sum + arr[idx]);
+}
+
+void solve() {
+    cin >> N;
+    for (int i = 0; i < N; i++) {
+        cin >> arr[i];
+        total += arr[i];
+    }
+    ans = total;
+    backtrack();
+    cout << ans << "\n";
 }
 
 int main() {
