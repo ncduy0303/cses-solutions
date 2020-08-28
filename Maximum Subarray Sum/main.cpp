@@ -26,19 +26,10 @@ typedef vector<vi> vvi;
 
 void solve() {
     int n; cin >> n;
-    ll ans = 0, cur = 0;
-    int arr[n], mn = INF, mx = -INF;
+    ll ans = -INF, cur = -INF; // set to negative infinity to be able to return non-empty maximum subarray sum
     for (int i = 0; i < n; i++) {
-        cin >> arr[i];
-        mn = min(mn, arr[i]);
-        mx = max(mx, arr[i]);
-    }
-    if (mx < 0 && mn < 0) { // the whole array is negative
-        cout << mx;
-        return;
-    }
-    for (int i = 0; i < n; i++) {
-        cur = max(cur + arr[i], 0ll);
+        ll x; cin >> x;
+        cur = max(x, cur + x);
         ans = max(ans, cur);
     }
     cout << ans << "\n";
