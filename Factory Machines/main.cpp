@@ -10,7 +10,7 @@ typedef tree<int, null_type, less_equal<int>, rb_tree_tag, tree_order_statistics
 const int MAX_N = 1e5 + 5;
 const int MAX_L = 20; // ~ Log N
 const long long MOD = 1e9 + 7;
-const long long INF = 1e9 + 7;
+const long long INF = 1e18 + 7;
 const double EPS = 1e-9;
 
 typedef long long ll;
@@ -25,25 +25,18 @@ typedef vector<vi> vvi;
 
 
 void solve() {
-    int n, x; cin >> n >> x;
-    array<int, 2> a[n];
-    for (int i = 0; i < n; i++) {
-        cin >> a[i][0];
-        a[i][1] = i;
-    }
-    sort(a, a + n);
+    int n, t; cin >> n >> t;
+    int k[n];
+    for (int i = 0; i < n; i++) cin >> k[i];
 
-    // 2 pointers
-    int l = 0, r = n - 1;
-    while (l < r) {
-        if      (a[l][0] + a[r][0] > x) r--;
-        else if (a[l][0] + a[r][0] < x) l++;
-        else {
-            cout << a[l][1] + 1 << " " << a[r][1] + 1 << "\n";
-            return;
-        }
+    ll lo = 0, hi = INF;
+    while (lo < hi) {
+        ll mid = (lo + hi) / 2, cur = 0;
+        for (int x : k) cur += min(mid / x, (ll)1e9); // to prevent overflow
+        if (cur >= t) hi = mid;
+        else lo = mid + 1;
     }
-    cout << "IMPOSSIBLE\n";
+    cout << hi << "\n";
 }
 
 int main() {

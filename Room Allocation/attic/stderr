@@ -1,0 +1,671 @@
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:28:[m[K [01;31m[Kerror: [m[Kexpected identifier before numeric constant
+   39 |         if (pq.empty() || [[01;31m[K1[m[K] <= pq.top().first) ans[x[2]] = ++cnt; // allocate a new room
+      |                            [01;31m[K^[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:[m[K In lambda function:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:31:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[K<=[m[K’ token
+   39 |         if (pq.empty() || [1] [01;31m[K<=[m[K pq.top().first) ans[x[2]] = ++cnt; // allocate a new room
+      |                               [01;31m[K^~[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:31:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator<=[m[K’ (operand types are ‘[01m[Ksolve()::<lambda()>[m[K’ and ‘[01m[Kconst int[m[K’)
+   39 |         if (pq.empty() || [1] <= pq.top().first) ans[x[2]] = ++cnt; // allocate a new room
+In file included from [01m[K/usr/include/c++/9/regex:62[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:110[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/regex.h:1059:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _BiIter> bool std::__cxx11::operator<=(const std::__cxx11::sub_match<_BiIter>&, const std::__cxx11::sub_match<_BiIter>&)[m[K’
+ 1059 |     [01;36m[Koperator[m[K<=(const sub_match<_BiIter>& __lhs, const sub_match<_BiIter>& __rhs)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/regex.h:1059:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::__cxx11::sub_match<_BiIter>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/regex:62[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:110[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/regex.h:1160:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Bi_iter, class _Ch_traits, class _Ch_alloc> bool std::__cxx11::operator<=(std::__cxx11::__sub_match_string<_Bi_iter, _Ch_traits, _Ch_alloc>&, const std::__cxx11::sub_match<_BiIter>&)[m[K’
+ 1160 |     [01;36m[Koperator[m[K<=(const __sub_match_string<_Bi_iter, _Ch_traits, _Ch_alloc>& __lhs,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/regex.h:1160:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kstd::__cxx11::__sub_match_string<_Bi_iter, _Ch_traits, _Ch_alloc>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/regex:62[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:110[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/regex.h:1234:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Bi_iter, class _Ch_traits, class _Ch_alloc> bool std::__cxx11::operator<=(const std::__cxx11::sub_match<_BiIter>&, std::__cxx11::__sub_match_string<_Bi_iter, _Ch_traits, _Ch_alloc>&)[m[K’
+ 1234 |     [01;36m[Koperator[m[K<=(const sub_match<_Bi_iter>& __lhs,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/regex.h:1234:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::__cxx11::sub_match<_BiIter>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/regex:62[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:110[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/regex.h:1308:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Bi_iter> bool std::__cxx11::operator<=(const typename std::iterator_traits<_Iter>::value_type*, const std::__cxx11::sub_match<_BiIter>&)[m[K’
+ 1308 |     [01;36m[Koperator[m[K<=(typename iterator_traits<_Bi_iter>::value_type const* __lhs,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/regex.h:1308:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::__cxx11::sub_match<_BiIter>[m[K’ and ‘[01m[Kconst int[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/regex:62[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:110[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/regex.h:1382:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Bi_iter> bool std::__cxx11::operator<=(const std::__cxx11::sub_match<_BiIter>&, const typename std::iterator_traits<_Iter>::value_type*)[m[K’
+ 1382 |     [01;36m[Koperator[m[K<=(const sub_match<_Bi_iter>& __lhs,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/regex.h:1382:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::__cxx11::sub_match<_BiIter>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/regex:62[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:110[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/regex.h:1460:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Bi_iter> bool std::__cxx11::operator<=(const typename std::iterator_traits<_Iter>::value_type&, const std::__cxx11::sub_match<_BiIter>&)[m[K’
+ 1460 |     [01;36m[Koperator[m[K<=(typename iterator_traits<_Bi_iter>::value_type const& __lhs,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/regex.h:1460:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::__cxx11::sub_match<_BiIter>[m[K’ and ‘[01m[Kconst int[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/regex:62[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:110[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/regex.h:1538:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Bi_iter> bool std::__cxx11::operator<=(const std::__cxx11::sub_match<_BiIter>&, const typename std::iterator_traits<_Iter>::value_type&)[m[K’
+ 1538 |     [01;36m[Koperator[m[K<=(const sub_match<_Bi_iter>& __lhs,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/regex.h:1538:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::__cxx11::sub_match<_BiIter>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:64[m[K,
+                 from [01m[K/usr/include/c++/9/bits/specfun.h:45[m[K,
+                 from [01m[K/usr/include/c++/9/cmath:1927[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:41[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_pair.h:473:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _T1, class _T2> constexpr bool std::operator<=(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)[m[K’
+  473 |     [01;36m[Koperator[m[K<=(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_pair.h:473:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::pair<_T1, _T2>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+                 from [01m[K/usr/include/c++/9/bits/specfun.h:45[m[K,
+                 from [01m[K/usr/include/c++/9/cmath:1927[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:41[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:349:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Iterator> constexpr bool std::operator<=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)[m[K’
+  349 |     [01;36m[Koperator[m[K<=(const reverse_iterator<_Iterator>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:349:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::reverse_iterator<_Iterator>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+                 from [01m[K/usr/include/c++/9/bits/specfun.h:45[m[K,
+                 from [01m[K/usr/include/c++/9/cmath:1927[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:41[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:387:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IteratorL, class _IteratorR> constexpr bool std::operator<=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)[m[K’
+  387 |     [01;36m[Koperator[m[K<=(const reverse_iterator<_IteratorL>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:387:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::reverse_iterator<_Iterator>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+                 from [01m[K/usr/include/c++/9/bits/specfun.h:45[m[K,
+                 from [01m[K/usr/include/c++/9/cmath:1927[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:41[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:1175:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IteratorL, class _IteratorR> constexpr bool std::operator<=(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)[m[K’
+ 1175 |     [01;36m[Koperator[m[K<=(const move_iterator<_IteratorL>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:1175:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::move_iterator<_IteratorL>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+                 from [01m[K/usr/include/c++/9/bits/specfun.h:45[m[K,
+                 from [01m[K/usr/include/c++/9/cmath:1927[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:41[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:1181:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Iterator> constexpr bool std::operator<=(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorL>&)[m[K’
+ 1181 |     [01;36m[Koperator[m[K<=(const move_iterator<_Iterator>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:1181:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::move_iterator<_IteratorL>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/bits/basic_string.h:48[m[K,
+                 from [01m[K/usr/include/c++/9/string:55[m[K,
+                 from [01m[K/usr/include/c++/9/bits/locale_classes.h:40[m[K,
+                 from [01m[K/usr/include/c++/9/bits/ios_base.h:41[m[K,
+                 from [01m[K/usr/include/c++/9/ios:42[m[K,
+                 from [01m[K/usr/include/c++/9/istream:38[m[K,
+                 from [01m[K/usr/include/c++/9/sstream:38[m[K,
+                 from [01m[K/usr/include/c++/9/complex:45[m[K,
+                 from [01m[K/usr/include/c++/9/ccomplex:39[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:54[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/string_view:545:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> constexpr bool std::operator<=(std::basic_string_view<_CharT, _Traits>, std::basic_string_view<_CharT, _Traits>)[m[K’
+  545 |     [01;36m[Koperator[m[K<=(basic_string_view<_CharT, _Traits> __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/string_view:545:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kstd::basic_string_view<_CharT, _Traits>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/bits/basic_string.h:48[m[K,
+                 from [01m[K/usr/include/c++/9/string:55[m[K,
+                 from [01m[K/usr/include/c++/9/bits/locale_classes.h:40[m[K,
+                 from [01m[K/usr/include/c++/9/bits/ios_base.h:41[m[K,
+                 from [01m[K/usr/include/c++/9/ios:42[m[K,
+                 from [01m[K/usr/include/c++/9/istream:38[m[K,
+                 from [01m[K/usr/include/c++/9/sstream:38[m[K,
+                 from [01m[K/usr/include/c++/9/complex:45[m[K,
+                 from [01m[K/usr/include/c++/9/ccomplex:39[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:54[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/string_view:551:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> constexpr bool std::operator<=(std::basic_string_view<_CharT, _Traits>, std::__detail::__idt<std::basic_string_view<_CharT, _Traits> >)[m[K’
+  551 |     [01;36m[Koperator[m[K<=(basic_string_view<_CharT, _Traits> __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/string_view:551:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kstd::basic_string_view<_CharT, _Traits>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/bits/basic_string.h:48[m[K,
+                 from [01m[K/usr/include/c++/9/string:55[m[K,
+                 from [01m[K/usr/include/c++/9/bits/locale_classes.h:40[m[K,
+                 from [01m[K/usr/include/c++/9/bits/ios_base.h:41[m[K,
+                 from [01m[K/usr/include/c++/9/ios:42[m[K,
+                 from [01m[K/usr/include/c++/9/istream:38[m[K,
+                 from [01m[K/usr/include/c++/9/sstream:38[m[K,
+                 from [01m[K/usr/include/c++/9/complex:45[m[K,
+                 from [01m[K/usr/include/c++/9/ccomplex:39[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:54[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/string_view:557:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> constexpr bool std::operator<=(std::__detail::__idt<std::basic_string_view<_CharT, _Traits> >, std::basic_string_view<_CharT, _Traits>)[m[K’
+  557 |     [01;36m[Koperator[m[K<=(__detail::__idt<basic_string_view<_CharT, _Traits>> __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/string_view:557:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::basic_string_view<_CharT, _Traits>[m[K’ and ‘[01m[Kint[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/string:55[m[K,
+                 from [01m[K/usr/include/c++/9/bits/locale_classes.h:40[m[K,
+                 from [01m[K/usr/include/c++/9/bits/ios_base.h:41[m[K,
+                 from [01m[K/usr/include/c++/9/ios:42[m[K,
+                 from [01m[K/usr/include/c++/9/istream:38[m[K,
+                 from [01m[K/usr/include/c++/9/sstream:38[m[K,
+                 from [01m[K/usr/include/c++/9/complex:45[m[K,
+                 from [01m[K/usr/include/c++/9/ccomplex:39[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:54[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/basic_string.h:6302:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _Alloc> bool std::operator<=(const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)[m[K’
+ 6302 |     [01;36m[Koperator[m[K<=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:6302:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::__cxx11::basic_string<_CharT, _Traits, _Allocator>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/string:55[m[K,
+                 from [01m[K/usr/include/c++/9/bits/locale_classes.h:40[m[K,
+                 from [01m[K/usr/include/c++/9/bits/ios_base.h:41[m[K,
+                 from [01m[K/usr/include/c++/9/ios:42[m[K,
+                 from [01m[K/usr/include/c++/9/istream:38[m[K,
+                 from [01m[K/usr/include/c++/9/sstream:38[m[K,
+                 from [01m[K/usr/include/c++/9/complex:45[m[K,
+                 from [01m[K/usr/include/c++/9/ccomplex:39[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:54[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/basic_string.h:6315:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _Alloc> bool std::operator<=(const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&, const _CharT*)[m[K’
+ 6315 |     [01;36m[Koperator[m[K<=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:6315:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::__cxx11::basic_string<_CharT, _Traits, _Allocator>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/string:55[m[K,
+                 from [01m[K/usr/include/c++/9/bits/locale_classes.h:40[m[K,
+                 from [01m[K/usr/include/c++/9/bits/ios_base.h:41[m[K,
+                 from [01m[K/usr/include/c++/9/ios:42[m[K,
+                 from [01m[K/usr/include/c++/9/istream:38[m[K,
+                 from [01m[K/usr/include/c++/9/sstream:38[m[K,
+                 from [01m[K/usr/include/c++/9/complex:45[m[K,
+                 from [01m[K/usr/include/c++/9/ccomplex:39[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:54[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/basic_string.h:6327:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _Alloc> bool std::operator<=(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)[m[K’
+ 6327 |     [01;36m[Koperator[m[K<=(const _CharT* __lhs,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:6327:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst _CharT*[m[K’ and ‘[01m[Ksolve()::<lambda()>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/tuple:39[m[K,
+                 from [01m[K/usr/include/c++/9/functional:54[m[K,
+                 from [01m[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/9/algorithm:71[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:65[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/array:275:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, long unsigned int _Nm> bool std::operator<=(const std::array<_Tp, _Nm>&, const std::array<_Tp, _Nm>&)[m[K’
+  275 |     [01;36m[Koperator[m[K<=(const array<_Tp, _Nm>& __one, const array<_Tp, _Nm>& __two)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/array:275:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::array<_Tp, _Nm>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/functional:54[m[K,
+                 from [01m[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/9/algorithm:71[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:65[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/tuple:1457:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ... _TElements, class ... _UElements> constexpr bool std::operator<=(const std::tuple<_Tps ...>&, const std::tuple<_Elements ...>&)[m[K’
+ 1457 |     [01;36m[Koperator[m[K<=(const tuple<_TElements...>& __t,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/tuple:1457:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::tuple<_Tps ...>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/bits/node_handle.h:39[m[K,
+                 from [01m[K/usr/include/c++/9/bits/hashtable.h:37[m[K,
+                 from [01m[K/usr/include/c++/9/unordered_map:46[m[K,
+                 from [01m[K/usr/include/c++/9/functional:61[m[K,
+                 from [01m[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/9/algorithm:71[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:65[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/optional:1017:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> constexpr std::__optional_relop_t<decltype ((declval<_Tp>() <= declval<_Up>()))> std::operator<=(const std::optional<_Tp>&, const std::optional<_Up>&)[m[K’
+ 1017 |     [01;36m[Koperator[m[K<=(const optional<_Tp>& __lhs, const optional<_Up>& __rhs)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/optional:1017:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::optional<_Tp>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/bits/node_handle.h:39[m[K,
+                 from [01m[K/usr/include/c++/9/bits/hashtable.h:37[m[K,
+                 from [01m[K/usr/include/c++/9/unordered_map:46[m[K,
+                 from [01m[K/usr/include/c++/9/functional:61[m[K,
+                 from [01m[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/9/algorithm:71[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:65[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/optional:1074:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> constexpr bool std::operator<=(const std::optional<_Tp>&, std::nullopt_t)[m[K’
+ 1074 |     [01;36m[Koperator[m[K<=(const optional<_Tp>& __lhs, nullopt_t) noexcept
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/optional:1074:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::optional<_Tp>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/bits/node_handle.h:39[m[K,
+                 from [01m[K/usr/include/c++/9/bits/hashtable.h:37[m[K,
+                 from [01m[K/usr/include/c++/9/unordered_map:46[m[K,
+                 from [01m[K/usr/include/c++/9/functional:61[m[K,
+                 from [01m[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/9/algorithm:71[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:65[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/optional:1079:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> constexpr bool std::operator<=(std::nullopt_t, const std::optional<_Tp>&)[m[K’
+ 1079 |     [01;36m[Koperator[m[K<=(nullopt_t, const optional<_Tp>& /* __rhs */) noexcept
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/optional:1079:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::optional<_Tp>[m[K’ and ‘[01m[Kconst int[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/bits/node_handle.h:39[m[K,
+                 from [01m[K/usr/include/c++/9/bits/hashtable.h:37[m[K,
+                 from [01m[K/usr/include/c++/9/unordered_map:46[m[K,
+                 from [01m[K/usr/include/c++/9/functional:61[m[K,
+                 from [01m[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/9/algorithm:71[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:65[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/optional:1143:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> constexpr std::__optional_relop_t<decltype ((declval<_Tp>() <= declval<_Up>()))> std::operator<=(const std::optional<_Tp>&, const _Up&)[m[K’
+ 1143 |     [01;36m[Koperator[m[K<=(const optional<_Tp>& __lhs, const _Up& __rhs)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/optional:1143:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::optional<_Tp>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/bits/node_handle.h:39[m[K,
+                 from [01m[K/usr/include/c++/9/bits/hashtable.h:37[m[K,
+                 from [01m[K/usr/include/c++/9/unordered_map:46[m[K,
+                 from [01m[K/usr/include/c++/9/functional:61[m[K,
+                 from [01m[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/9/algorithm:71[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:65[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/optional:1149:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> constexpr std::__optional_relop_t<decltype ((declval<_Up>() <= declval<_Tp>()))> std::operator<=(const _Up&, const std::optional<_Tp>&)[m[K’
+ 1149 |     [01;36m[Koperator[m[K<=(const _Up& __lhs, const optional<_Tp>& __rhs)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/optional:1149:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::optional<_Tp>[m[K’ and ‘[01m[Kconst int[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/vector:67[m[K,
+                 from [01m[K/usr/include/c++/9/functional:62[m[K,
+                 from [01m[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/9/algorithm:71[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:65[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_vector.h:1924:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Alloc> bool std::operator<=(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)[m[K’
+ 1924 |     [01;36m[Koperator[m[K<=(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_vector.h:1924:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::vector<_Tp, _Alloc>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/deque:67[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:68[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_deque.h:340:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Ref, class _Ptr> bool std::operator<=(const std::_Deque_iterator<_Tp, _Ref, _Ptr>&, const std::_Deque_iterator<_Tp, _Ref, _Ptr>&)[m[K’
+  340 |     [01;36m[Koperator[m[K<=(const _Deque_iterator<_Tp, _Ref, _Ptr>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_deque.h:340:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::_Deque_iterator<_Tp, _Ref, _Ptr>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/deque:67[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:68[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_deque.h:347:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _RefL, class _PtrL, class _RefR, class _PtrR> bool std::operator<=(const std::_Deque_iterator<_Tp, _Ref, _Ptr>&, const std::_Deque_iterator<_Tp, _RefR, _PtrR>&)[m[K’
+  347 |     [01;36m[Koperator[m[K<=(const _Deque_iterator<_Tp, _RefL, _PtrL>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_deque.h:347:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::_Deque_iterator<_Tp, _Ref, _Ptr>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/deque:67[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:68[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_deque.h:2352:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Alloc> bool std::operator<=(const std::deque<_Tp, _Alloc>&, const std::deque<_Tp, _Alloc>&)[m[K’
+ 2352 |     [01;36m[Koperator[m[K<=(const deque<_Tp, _Alloc>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_deque.h:2352:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::deque<_Tp, _Alloc>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/bits/locale_conv.h:41[m[K,
+                 from [01m[K/usr/include/c++/9/locale:43[m[K,
+                 from [01m[K/usr/include/c++/9/iomanip:43[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:72[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/unique_ptr.h:773:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Dp, class _Up, class _Ep> bool std::operator<=(const std::unique_ptr<_Tp, _Dp>&, const std::unique_ptr<_Up, _Ep>&)[m[K’
+  773 |     [01;36m[Koperator[m[K<=(const unique_ptr<_Tp, _Dp>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/unique_ptr.h:773:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::unique_ptr<_Tp, _Dp>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/bits/locale_conv.h:41[m[K,
+                 from [01m[K/usr/include/c++/9/locale:43[m[K,
+                 from [01m[K/usr/include/c++/9/iomanip:43[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:72[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/unique_ptr.h:779:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Dp> bool std::operator<=(const std::unique_ptr<_Tp, _Dp>&, std::nullptr_t)[m[K’
+  779 |     [01;36m[Koperator[m[K<=(const unique_ptr<_Tp, _Dp>& __x, nullptr_t)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/unique_ptr.h:779:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::unique_ptr<_Tp, _Dp>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/bits/locale_conv.h:41[m[K,
+                 from [01m[K/usr/include/c++/9/locale:43[m[K,
+                 from [01m[K/usr/include/c++/9/iomanip:43[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:72[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/unique_ptr.h:784:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Dp> bool std::operator<=(std::nullptr_t, const std::unique_ptr<_Tp, _Dp>&)[m[K’
+  784 |     [01;36m[Koperator[m[K<=(nullptr_t, const unique_ptr<_Tp, _Dp>& __x)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/unique_ptr.h:784:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::unique_ptr<_Tp, _Dp>[m[K’ and ‘[01m[Kconst int[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/list:63[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:79[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_list.h:2044:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Alloc> bool std::operator<=(const std::__cxx11::list<_Tp, _Alloc>&, const std::__cxx11::list<_Tp, _Alloc>&)[m[K’
+ 2044 |     [01;36m[Koperator[m[K<=(const list<_Tp, _Alloc>& __x, const list<_Tp, _Alloc>& __y)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_list.h:2044:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::__cxx11::list<_Tp, _Alloc>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/map:61[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:81[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_map.h:1493:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator<=(const std::map<_Key, _Tp, _Compare, _Allocator>&, const std::map<_Key, _Tp, _Compare, _Allocator>&)[m[K’
+ 1493 |     [01;36m[Koperator[m[K<=(const map<_Key, _Tp, _Compare, _Alloc>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_map.h:1493:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::map<_Key, _Tp, _Compare, _Allocator>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/map:62[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:81[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_multimap.h:1157:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator<=(const std::multimap<_Key, _Tp, _Compare, _Allocator>&, const std::multimap<_Key, _Tp, _Compare, _Allocator>&)[m[K’
+ 1157 |     [01;36m[Koperator[m[K<=(const multimap<_Key, _Tp, _Compare, _Alloc>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_multimap.h:1157:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::multimap<_Key, _Tp, _Compare, _Allocator>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:82[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1471:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp1, class _Tp2, __gnu_cxx::_Lock_policy _Lp> bool std::operator<=(const std::__shared_ptr<_Tp1, _Lp>&, const std::__shared_ptr<_Tp2, _Lp>&)[m[K’
+ 1471 |     [01;36m[Koperator[m[K<=(const __shared_ptr<_Tp1, _Lp>& __a,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1471:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::__shared_ptr<_Tp1, _Lp>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:82[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1477:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator<=(const std::__shared_ptr<_Tp, _Lp>&, std::nullptr_t)[m[K’
+ 1477 |     [01;36m[Koperator[m[K<=(const __shared_ptr<_Tp, _Lp>& __a, nullptr_t) noexcept
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1477:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::__shared_ptr<_Tp, _Lp>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:82[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1482:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator<=(std::nullptr_t, const std::__shared_ptr<_Tp, _Lp>&)[m[K’
+ 1482 |     [01;36m[Koperator[m[K<=(nullptr_t, const __shared_ptr<_Tp, _Lp>& __a) noexcept
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1482:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::__shared_ptr<_Tp, _Lp>[m[K’ and ‘[01m[Kconst int[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:82[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:439:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> bool std::operator<=(const std::shared_ptr<_Tp>&, const std::shared_ptr<_Tp>&)[m[K’
+  439 |     [01;36m[Koperator[m[K<=(const shared_ptr<_Tp>& __a, const shared_ptr<_Up>& __b) noexcept
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:439:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::shared_ptr<_Tp>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:82[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:444:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> bool std::operator<=(const std::shared_ptr<_Tp>&, std::nullptr_t)[m[K’
+  444 |     [01;36m[Koperator[m[K<=(const shared_ptr<_Tp>& __a, nullptr_t) noexcept
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:444:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::shared_ptr<_Tp>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:82[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:449:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> bool std::operator<=(std::nullptr_t, const std::shared_ptr<_Tp>&)[m[K’
+  449 |     [01;36m[Koperator[m[K<=(nullptr_t, const shared_ptr<_Tp>& __a) noexcept
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:449:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::shared_ptr<_Tp>[m[K’ and ‘[01m[Kconst int[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/queue:64[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:86[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_queue.h:374:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Seq> bool std::operator<=(const std::queue<_Tp, _Seq>&, const std::queue<_Tp, _Seq>&)[m[K’
+  374 |     [01;36m[Koperator[m[K<=(const queue<_Tp, _Seq>& __x, const queue<_Tp, _Seq>& __y)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_queue.h:374:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::queue<_Tp, _Seq>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/set:61[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:87[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_set.h:1017:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Key, class _Compare, class _Alloc> bool std::operator<=(const std::set<_Key, _Compare, _Allocator>&, const std::set<_Key, _Compare, _Allocator>&)[m[K’
+ 1017 |     [01;36m[Koperator[m[K<=(const set<_Key, _Compare, _Alloc>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_set.h:1017:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::set<_Key, _Compare, _Allocator>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/set:62[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:87[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_multiset.h:1002:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Key, class _Compare, class _Alloc> bool std::operator<=(const std::multiset<_Key, _Compare, _Allocator>&, const std::multiset<_Key, _Compare, _Allocator>&)[m[K’
+ 1002 |     [01;36m[Koperator[m[K<=(const multiset<_Key, _Compare, _Alloc>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_multiset.h:1002:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::multiset<_Key, _Compare, _Allocator>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/stack:61[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:89[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_stack.h:349:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Seq> bool std::operator<=(const std::stack<_Tp, _Seq>&, const std::stack<_Tp, _Seq>&)[m[K’
+  349 |     [01;36m[Koperator[m[K<=(const stack<_Tp, _Seq>& __x, const stack<_Tp, _Seq>& __y)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_stack.h:349:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::stack<_Tp, _Seq>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/valarray:603[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/valarray_after.h:421:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Dom1, class _Dom2> std::_Expr<std::__detail::_BinClos<std::__less_equal, std::_Expr, std::_Expr, _Dom1, _Dom2>, typename std::__fun<std::__less_equal, typename _Dom1::value_type>::result_type> std::operator<=(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::_Expr<_Dom2, typename _Dom2::value_type>&)[m[K’
+  421 |     [01;36m[K_DEFINE_EXPR_BINARY_OPERATOR[m[K(<=, __less_equal)
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/valarray_after.h:421:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::_Expr<_Dom1, typename _Dom1::value_type>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/valarray:603[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/valarray_after.h:421:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Dom> std::_Expr<std::__detail::_BinClos<std::__less_equal, std::_Expr, std::_Constant, _Dom, typename _Dom::value_type>, typename std::__fun<std::__less_equal, typename _Dom1::value_type>::result_type> std::operator<=(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const typename _Dom::value_type&)[m[K’
+  421 |     [01;36m[K_DEFINE_EXPR_BINARY_OPERATOR[m[K(<=, __less_equal)
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/valarray_after.h:421:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::_Expr<_Dom1, typename _Dom1::value_type>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/valarray:603[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/valarray_after.h:421:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Dom> std::_Expr<std::__detail::_BinClos<std::__less_equal, std::_Constant, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__less_equal, typename _Dom1::value_type>::result_type> std::operator<=(const typename _Dom::value_type&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)[m[K’
+  421 |     [01;36m[K_DEFINE_EXPR_BINARY_OPERATOR[m[K(<=, __less_equal)
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/valarray_after.h:421:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::_Expr<_Dom1, typename _Dom1::value_type>[m[K’ and ‘[01m[Kconst int[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/valarray:603[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/valarray_after.h:421:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Dom> std::_Expr<std::__detail::_BinClos<std::__less_equal, std::_Expr, std::_ValArray, _Dom, typename _Dom::value_type>, typename std::__fun<std::__less_equal, typename _Dom1::value_type>::result_type> std::operator<=(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::valarray<typename _Dom::value_type>&)[m[K’
+  421 |     [01;36m[K_DEFINE_EXPR_BINARY_OPERATOR[m[K(<=, __less_equal)
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/valarray_after.h:421:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::_Expr<_Dom1, typename _Dom1::value_type>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/valarray:603[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/valarray_after.h:421:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Dom> std::_Expr<std::__detail::_BinClos<std::__less_equal, std::_ValArray, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__less_equal, typename _Dom1::value_type>::result_type> std::operator<=(const std::valarray<typename _Dom::value_type>&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)[m[K’
+  421 |     [01;36m[K_DEFINE_EXPR_BINARY_OPERATOR[m[K(<=, __less_equal)
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/valarray_after.h:421:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::_Expr<_Dom1, typename _Dom1::value_type>[m[K’ and ‘[01m[Kconst int[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/valarray:1201:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::_Expr<std::__detail::_BinClos<std::__less_equal, std::_ValArray, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__less_equal, _Tp>::result_type> std::operator<=(const std::valarray<_Tp>&, const std::valarray<_Tp>&)[m[K’
+ 1201 | [01;36m[K_DEFINE_BINARY_OPERATOR[m[K(<=, __less_equal)
+      | [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/valarray:1201:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::valarray<_Tp>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/valarray:1201:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::_Expr<std::__detail::_BinClos<std::__less_equal, std::_ValArray, std::_Constant, _Tp, _Tp>, typename std::__fun<std::__less_equal, _Tp>::result_type> std::operator<=(const std::valarray<_Tp>&, const typename std::valarray<_Tp>::value_type&)[m[K’
+ 1201 | [01;36m[K_DEFINE_BINARY_OPERATOR[m[K(<=, __less_equal)
+      | [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/valarray:1201:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::valarray<_Tp>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/valarray:1201:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::_Expr<std::__detail::_BinClos<std::__less_equal, std::_Constant, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__less_equal, _Tp>::result_type> std::operator<=(const typename std::valarray<_Tp>::value_type&, const std::valarray<_Tp>&)[m[K’
+ 1201 | [01;36m[K_DEFINE_BINARY_OPERATOR[m[K(<=, __less_equal)
+      | [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/valarray:1201:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::valarray<_Tp>[m[K’ and ‘[01m[Kconst int[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/forward_list:38[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:104[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/forward_list.h:1472:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Alloc> bool std::operator<=(const std::forward_list<_Tp, _Alloc>&, const std::forward_list<_Tp, _Alloc>&)[m[K’
+ 1472 |     [01;36m[Koperator[m[K<=(const forward_list<_Tp, _Alloc>& __lx,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/forward_list.h:1472:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::forward_list<_Tp, _Alloc>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/future:39[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:105[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/thread:298:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool std::operator<=(std::thread::id, std::thread::id)[m[K’
+  298 |   [01;36m[Koperator[m[K<=(thread::id __x, thread::id __y) noexcept
+      |   [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/thread:298:25:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Ksolve()::<lambda()>[m[K’ to ‘[01m[Kstd::thread::id[m[K’
+  298 |   operator<=([01;36m[Kthread::id __x[m[K, thread::id __y) noexcept
+      |              [01;36m[K~~~~~~~~~~~^~~[m[K
+In file included from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:133[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/variant:1176:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ... _Types> constexpr bool std::operator<=(const std::variant<_Types ...>&, const std::variant<_Types ...>&)[m[K’
+ 1176 |   [01;36m[K_VARIANT_RELATION_FUNCTION_TEMPLATE[m[K(<=, less_equal)
+      |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/variant:1176:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:39:43:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksolve()::<lambda()>[m[K’ is not derived from ‘[01m[Kconst std::variant<_Types ...>[m[K’
+   39 |         if (pq.empty() || [1] <= pq.top().[01;36m[Kfirst[m[K) ans[x[2]] = ++cnt; // allocate a new room
+      |                                           [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:133[m[K,
+                 from [01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Room Allocation/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/variant:1176:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr bool std::operator<=(std::monostate, std::monostate)[m[K’
+ 1176 |   [01;36m[K_VARIANT_RELATION_FUNCTION_TEMPLATE[m[K(<=, less_equal)
+      |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/variant:1176:3:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Ksolve()::<lambda()>[m[K’ to ‘[01m[Kstd::monostate[m[K’
+ 1176 |   [01;36m[K_VARIANT_RELATION_FUNCTION_TEMPLATE[m[K(<=, less_equal)
+      |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K

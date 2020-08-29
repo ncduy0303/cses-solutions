@@ -25,25 +25,17 @@ typedef vector<vi> vvi;
 
 
 void solve() {
-    int n, x; cin >> n >> x;
-    array<int, 2> a[n];
-    for (int i = 0; i < n; i++) {
-        cin >> a[i][0];
-        a[i][1] = i;
-    }
-    sort(a, a + n);
+    int n; cin >> n;
+    ii arr[n];
+    for (int i = 0; i < n; i++) cin >> arr[i].first >> arr[i].second;
+    sort(arr, arr + n);
 
-    // 2 pointers
-    int l = 0, r = n - 1;
-    while (l < r) {
-        if      (a[l][0] + a[r][0] > x) r--;
-        else if (a[l][0] + a[r][0] < x) l++;
-        else {
-            cout << a[l][1] + 1 << " " << a[r][1] + 1 << "\n";
-            return;
-        }
+    ll cur = 0, ans = 0;
+    for (ii x : arr) {
+        cur += x.first;
+        ans += x.second - cur;
     }
-    cout << "IMPOSSIBLE\n";
+    cout << ans << "\n";
 }
 
 int main() {

@@ -1,0 +1,34 @@
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Sum of Three Values/main.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Sum of Three Values/main.cpp:30:19:[m[K [01;31m[Kerror: [m[Kconflicting declaration ‘[01m[Kstd::array<int, 2> a [n][m[K’
+   30 |     array<int, 2> [01;31m[Ka[m[K[n];
+      |                   [01;31m[K^[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Sum of Three Values/main.cpp:29:9:[m[K [01;36m[Knote: [m[Kprevious declaration as ‘[01m[Kint a [n][m[K’
+   29 |     int [01;36m[Ka[m[K[n];
+      |         [01;36m[K^[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Sum of Three Values/main.cpp:32:22:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kint[int][m[K’ for array subscript
+   32 |         cin >> a[i][0[01;31m[K][m[K;
+      |                      [01;31m[K^[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Sum of Three Values/main.cpp:33:15:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kint[int][m[K’ for array subscript
+   33 |         a[i][1[01;31m[K][m[K = i;
+      |               [01;31m[K^[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Sum of Three Values/main.cpp:40:28:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kint[int][m[K’ for array subscript
+   40 |             if      (a[l][0[01;31m[K][m[K + a[r][0] > x) r--;
+      |                            [01;31m[K^[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Sum of Three Values/main.cpp:40:38:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kint[int][m[K’ for array subscript
+   40 |             if      (a[l][0] + a[r][0[01;31m[K][m[K > x) r--;
+      |                                      [01;31m[K^[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Sum of Three Values/main.cpp:41:28:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kint[int][m[K’ for array subscript
+   41 |             else if (a[l][0[01;31m[K][m[K + a[r][0] < x) l++;
+      |                            [01;31m[K^[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Sum of Three Values/main.cpp:41:38:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kint[int][m[K’ for array subscript
+   41 |             else if (a[l][0] + a[r][0[01;31m[K][m[K < x) l++;
+      |                                      [01;31m[K^[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Sum of Three Values/main.cpp:43:31:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kint[int][m[K’ for array subscript
+   43 |                 cout << a[i][1[01;31m[K][m[K + 1 << " " << a[l][1] + 1 << " " << a[r][1] + 1 << "\n";
+      |                               [01;31m[K^[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Sum of Three Values/main.cpp:43:53:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kint[int][m[K’ for array subscript
+   43 |                 cout << a[i][1] + 1 << " " << a[l][1[01;31m[K][m[K + 1 << " " << a[r][1] + 1 << "\n";
+      |                                                     [01;31m[K^[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Sum of Three Values/main.cpp:43:75:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kint[int][m[K’ for array subscript
+   43 |                 cout << a[i][1] + 1 << " " << a[l][1] + 1 << " " << a[r][1[01;31m[K][m[K + 1 << "\n";
+      |                                                                           [01;31m[K^[m[K

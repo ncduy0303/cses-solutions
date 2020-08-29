@@ -33,14 +33,15 @@ void solve() {
     }
     sort(a, a + n);
 
-    // 2 pointers
-    int l = 0, r = n - 1;
-    while (l < r) {
-        if      (a[l][0] + a[r][0] > x) r--;
-        else if (a[l][0] + a[r][0] < x) l++;
-        else {
-            cout << a[l][1] + 1 << " " << a[r][1] + 1 << "\n";
-            return;
+    for (int i = 0; i < n; i++) {
+        int l = i + 1, r = n - 1;
+        while (l < r) {
+            if      (a[l][0] + a[r][0] > x - a[i][0]) r--;
+            else if (a[l][0] + a[r][0] < x - a[i][0]) l++;
+            else {
+                cout << a[i][1] + 1 << " " << a[l][1] + 1 << " " << a[r][1] + 1 << "\n";
+                return;
+            }
         }
     }
     cout << "IMPOSSIBLE\n";

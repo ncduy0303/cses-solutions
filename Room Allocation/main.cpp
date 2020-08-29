@@ -25,25 +25,27 @@ typedef vector<vi> vvi;
 
 
 void solve() {
-    int n, x; cin >> n >> x;
-    array<int, 2> a[n];
+    int n; cin >> n;
+    array<int, 3> arr[n];
     for (int i = 0; i < n; i++) {
-        cin >> a[i][0];
-        a[i][1] = i;
+        cin >> arr[i][0] >> arr[i][1];
+        arr[i][2] = i;
     }
-    sort(a, a + n);
+    sort(arr, arr + n); // sort based on arrival day
 
-    // 2 pointers
-    int l = 0, r = n - 1;
-    while (l < r) {
-        if      (a[l][0] + a[r][0] > x) r--;
-        else if (a[l][0] + a[r][0] < x) l++;
-        else {
-            cout << a[l][1] + 1 << " " << a[r][1] + 1 << "\n";
-            return;
+    priority_queue<ii, vector<ii>, greater<ii>> pq; 
+    int ans[n], cnt = 0;
+    for (auto x : arr) {
+        if (pq.empty() || x[0] <= pq.top().first) ans[x[2]] = ++cnt; // allocate a new room
+        else { // can use that room for the next guest
+            ans[x[2]] = pq.top().second;
+            pq.pop();
         }
+        pq.push({x[1], ans[x[2]]});
     }
-    cout << "IMPOSSIBLE\n";
+    cout << cnt << "\n";
+    for (int x : ans) cout << x << " ";
+    cout << "\n";
 }
 
 int main() {
