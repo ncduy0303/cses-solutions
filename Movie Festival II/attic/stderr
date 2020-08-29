@@ -1,0 +1,8 @@
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Movie Festival II/main.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Movie Festival II/main.cpp:36:65:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K{[m[K’ token
+   36 |         if [34m[K([m[Kpq.empty() || (x[1] < pq.top() && pq.size() < k - 1)[01;31m[K [m[K[32m[K{[m[K // allocate a new member to watch the next movie
+      |            [34m[K~[m[K                                                    [01;31m[K^[m[K[32m[K~[m[K
+      |                                                                 [32m[K)[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Movie Festival II/main.cpp:45:5:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K}[m[K’ token
+   45 |     [01;31m[K}[m[K
+      |     [01;31m[K^[m[K

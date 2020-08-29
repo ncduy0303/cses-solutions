@@ -1,0 +1,4 @@
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Sliding Cost/main.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Sliding Cost/main.cpp:35:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kcur_med[m[K’ was not declared in this scope
+   35 |     for (int i = 0; i < k; i++) ans += (arr[i] - [01;31m[Kcur_med[m[K);
+      |                                                  [01;31m[K^~~~~~~[m[K
