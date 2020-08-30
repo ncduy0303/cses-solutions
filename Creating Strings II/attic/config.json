@@ -1,0 +1,17 @@
+{
+  "mainSolution": {
+    "value": "/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Creating Strings II/main.cpp"
+  },
+  "bruteSolution": {},
+  "generator": {},
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "Creating Strings II",
+      "group": "CSES - CSES Problem Set",
+      "url": "https://cses.fi/problemset/task/1715",
+      "memoryLimit": 512,
+      "timeLimit": 1000
+    }
+  }
+}
