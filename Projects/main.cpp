@@ -25,17 +25,20 @@ typedef vector<vi> vvi;
 
 
 void solve() {
-    int n, x; cin >> n >> x;
-    int h[n], s[n];
-    for (int i = 0; i < n; i++) cin >> h[i];
-    for (int i = 0; i < n; i++) cin >> s[i];
-    vi dp(x + 1, 0);
-    for (int i = 0; i < n; i++) {
-        for (int j = x; j >= h[i]; j--) {
-            dp[j] = max(dp[j], dp[j - h[i]] + s[i]);
-        }
+    int n; cin >> n;
+    array<int, 3> arr[n];
+    for (int i = 0; i < n; i++) cin >> arr[i][1] >> arr[i][0] >> arr[i][2];
+    sort(arr, arr + n); // sort based on ending days
+    ll dp[n];
+    dp[0] = arr[0][2];
+    for (int i = 1; i < n; i++) {
+        int k = lower_bound(arr, arr + n, array<int, 3>{arr[i][1], 0, 0}) - arr - 1;
+        if (k >= 0)
+            dp[i] = max(dp[i - 1], dp[k] + (ll)arr[i][2]);
+        else
+            dp[i] = max(dp[i - 1], (ll)arr[i][2]);
     }
-    cout << dp[x] << "\n";
+    cout << dp[n - 1] << "\n";
 }
 
 int main() {

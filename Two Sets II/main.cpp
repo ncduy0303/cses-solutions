@@ -25,17 +25,20 @@ typedef vector<vi> vvi;
 
 
 void solve() {
-    int n, x; cin >> n >> x;
-    int h[n], s[n];
-    for (int i = 0; i < n; i++) cin >> h[i];
-    for (int i = 0; i < n; i++) cin >> s[i];
+    int n; cin >> n;
+    if (n * (n + 1) % 4) {
+        cout << 0 << "\n";
+        return;
+    }
+    int x = n * (n + 1) / 2;
     vi dp(x + 1, 0);
-    for (int i = 0; i < n; i++) {
-        for (int j = x; j >= h[i]; j--) {
-            dp[j] = max(dp[j], dp[j - h[i]] + s[i]);
+    dp[0] = 1;
+    for (int i = 1; i < n; i++) { // loop to n - 1 so n will be always put into the 2nd set => avoid overcounting
+        for (int j = x; j >= i; j--) {
+            (dp[j] += dp[j - i]) %= MOD;
         }
     }
-    cout << dp[x] << "\n";
+    cout << dp[x / 2] << "\n";
 }
 
 int main() {

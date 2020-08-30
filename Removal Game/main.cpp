@@ -25,17 +25,19 @@ typedef vector<vi> vvi;
 
 
 void solve() {
-    int n, x; cin >> n >> x;
-    int h[n], s[n];
-    for (int i = 0; i < n; i++) cin >> h[i];
-    for (int i = 0; i < n; i++) cin >> s[i];
-    vi dp(x + 1, 0);
-    for (int i = 0; i < n; i++) {
-        for (int j = x; j >= h[i]; j--) {
-            dp[j] = max(dp[j], dp[j - h[i]] + s[i]);
+    int n; cin >> n;
+    int x[n];
+    for (int i = 0; i < n; i++) cin >> x[i];
+    ll dp[n][n];
+    for (int l = 0; l < n; l++) {
+        for (int i = 0, j = i + l; j < n; i++, j++) {
+            if (l == 0) dp[i][j] = x[i];
+            else if (l == 1) dp[i][j] = max(x[i], x[j]);
+            else dp[i][j] = max(x[i] + min(dp[i + 1][j - 1], dp[i + 2][j]),
+                                x[j] + min(dp[i + 1][j - 1], dp[i][j - 2]));
         }
     }
-    cout << dp[x] << "\n";
+    cout << dp[0][n - 1] << "\n";
 }
 
 int main() {
