@@ -1,0 +1,5 @@
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Moving Robots/main.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Moving Robots/main.cpp:33:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kans[m[K’ was not declared in this scope; did you mean ‘[01m[Kabs[m[K’?
+   33 |             [01;31m[Kans[m[K[i][j] = 1; // after 1st turn, E(X) = 1 for all individual square since the robot will definitely leave that square
+      |             [01;31m[K^~~[m[K
+      |             [32m[Kabs[m[K

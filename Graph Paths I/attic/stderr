@@ -1,0 +1,22 @@
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Graph Paths I/main.cpp:[m[K In function ‘[01m[Kmatrix qexp(matrix, int)[m[K’:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Graph Paths I/main.cpp:43:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   43 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Graph Paths I/main.cpp:[m[K In member function ‘[01m[KMatrix Matrix::operator*(const Matrix&)[m[K’:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Graph Paths I/main.cpp:51:23:[m[K [01;31m[Kerror: [m[Kconversion from ‘[01m[KMatrix[m[K’ to non-scalar type ‘[01m[Kmatrix[m[K’ requested
+   51 |         matrix o, b = [01;31m[K*this[m[K;
+      |                       [01;31m[K^~~~~[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Graph Paths I/main.cpp:53:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct matrix[m[K’ has no member named ‘[01m[Ka[m[K’
+   53 |             o.[01;31m[Ka[m[K[i][j] = (o.a[i][j] + b.a[i][k] *c.a[k][j]) % MOD;
+      |               [01;31m[K^[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Graph Paths I/main.cpp:53:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct matrix[m[K’ has no member named ‘[01m[Ka[m[K’
+   53 |             o.a[i][j] = (o.[01;31m[Ka[m[K[i][j] + b.a[i][k] *c.a[k][j]) % MOD;
+      |                            [01;31m[K^[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Graph Paths I/main.cpp:53:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct matrix[m[K’ has no member named ‘[01m[Ka[m[K’
+   53 |             o.a[i][j] = (o.a[i][j] + b.[01;31m[Ka[m[K[i][k] *c.a[k][j]) % MOD;
+      |                                        [01;31m[K^[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Graph Paths I/main.cpp:55:16:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[Ko[m[K’ from ‘[01m[Kmatrix[m[K’ to ‘[01m[KMatrix[m[K’
+   55 |         return [01;31m[Ko[m[K;
+      |                [01;31m[K^[m[K
+      |                [01;31m[K|[m[K
+      |                [01;31m[Kmatrix[m[K
