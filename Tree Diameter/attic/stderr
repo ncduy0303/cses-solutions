@@ -1,0 +1,6 @@
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Tree Diameter/main.cpp:32:5:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kfor[m[K’
+   32 |     [01;31m[Kfor[m[K (int v : adj[u]) {
+      |     [01;31m[K^~~[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Tree Diameter/main.cpp:37:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+   37 | [01;31m[K}[m[K
+      | [01;31m[K^[m[K
