@@ -1,0 +1,4 @@
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Minimal Rotation/main.cpp:[m[K In function ‘[01m[Kint min_rotation(std::string)[m[K’:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Minimal Rotation/main.cpp:30:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kb[m[K’ was not declared in this scope
+   30 |             if (ans + i == [01;31m[Kb[m[K || s[ans + i] < s[cur + i]) {
+      |                            [01;31m[K^[m[K

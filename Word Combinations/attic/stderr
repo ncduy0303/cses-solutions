@@ -1,0 +1,4 @@
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Word Combinations/main.cpp:8:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktree[m[K’ does not name a type; did you mean ‘[01m[Kfree[m[K’?
+    8 | typedef [01;31m[Ktree[m[K<int, null_type, less_equal<int>, rb_tree_tag, tree_order_statistics_node_update> ordered_set;
+      |         [01;31m[K^~~~[m[K
+      |         [32m[Kfree[m[K

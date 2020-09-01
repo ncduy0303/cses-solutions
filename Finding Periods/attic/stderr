@@ -1,0 +1,10 @@
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Finding Periods/main.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Finding Periods/main.cpp:51:12:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+   51 | int main() [01;31m[K{[m[K
+      |            [01;31m[K^[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Finding Periods/main.cpp:62:1:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+   62 | [01;31m[K}[m[K
+      | [01;31m[K^[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Finding Periods/main.cpp:40:14:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+   40 | void solve() [01;36m[K{[m[K
+      |              [01;36m[K^[m[K
