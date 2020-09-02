@@ -1,0 +1,13 @@
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/List Removals/main.cpp:8:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kii[m[K’ was not declared in this scope
+    8 | typedef tree<[01;31m[Kii[m[K, null_type, less_equal<ii>, rb_tree_tag, tree_order_statistics_node_update> ordered_set;
+      |              [01;31m[K^~[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/List Removals/main.cpp:8:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kii[m[K’ was not declared in this scope
+    8 | typedef tree<ii, null_type, less_equal<[01;31m[Kii[m[K>, rb_tree_tag, tree_order_statistics_node_update> ordered_set;
+      |                                        [01;31m[K^~[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/List Removals/main.cpp:8:42:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+    8 | typedef tree<ii, null_type, less_equal<ii[01;31m[K>[m[K, rb_tree_tag, tree_order_statistics_node_update> ordered_set;
+      |                                          [01;31m[K^[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/List Removals/main.cpp:8:91:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+    8 | typedef tree<ii, null_type, less_equal<ii>, rb_tree_tag, tree_order_statistics_node_update[01;31m[K>[m[K ordered_set;
+      |                                                                                           [01;31m[K^[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/List Removals/main.cpp:8:91:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
