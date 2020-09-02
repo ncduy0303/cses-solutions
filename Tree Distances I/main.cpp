@@ -25,8 +25,8 @@ typedef vector<vi> vvi;
 int n, dist[MAX_N][2], mx, c;
 vi adj[MAX_N];
  
-void dfs(int u, int p = -1) {
-    dist[u][c] = (p == -1) ? 0 : dist[p][c] + 1;
+void dfs(int u, int p = 0) {
+    dist[u][c] = (p) ? dist[p][c] + 1 : 0;
     if (dist[u][c] > dist[mx][c]) mx = u;
     for (int v : adj[u]) {
         if (v != p) {

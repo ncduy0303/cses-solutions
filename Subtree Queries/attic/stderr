@@ -1,0 +1,11 @@
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Subtree Queries/main.cpp:[m[K In function ‘[01m[Kll rsq(int, int)[m[K’:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Subtree Queries/main.cpp:44:17:[m[K [01;31m[Kerror: [m[Ktoo few arguments to function ‘[01m[Kll rsq(int, int)[m[K’
+   44 |     return rsq(b[01;31m[K)[m[K - rqs(a - 1);
+      |                 [01;31m[K^[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Subtree Queries/main.cpp:43:4:[m[K [01;36m[Knote: [m[Kdeclared here
+   43 | ll [01;36m[Krsq[m[K(int a, int b) {
+      |    [01;36m[K^~~[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Subtree Queries/main.cpp:44:21:[m[K [01;31m[Kerror: [m[K‘[01m[Krqs[m[K’ was not declared in this scope; did you mean ‘[01m[Krsq[m[K’?
+   44 |     return rsq(b) - [01;31m[Krqs[m[K(a - 1);
+      |                     [01;31m[K^~~[m[K
+      |                     [32m[Krsq[m[K

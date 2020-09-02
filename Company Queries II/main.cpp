@@ -22,29 +22,50 @@ typedef vector<vi> vvi;
 #define LSOne(S) (S & (-S))
 #define isBitSet(S, i) ((S >> i) & 1)
 
-int n, dist[MAX_N], mx;
+int n, q, dp[MAX_N][MAX_L], dep[MAX_N];
 vi adj[MAX_N];
- 
+
 void dfs(int u, int p = 0) {
-    dist[u] = (p) ? dist[p] + 1 : 0;
-    if (dist[u] > dist[mx]) mx = u;
+    dp[u][0] = p;
+    dep[u] = dep[p] + 1;
+    for (int i = 1; i < MAX_L; i++)
+        dp[u][i] = dp[dp[u][i - 1]][i - 1];
     for (int v : adj[u]) {
         if (v != p) {
             dfs(v, u);
         }
     }
 }
- 
+
+int ancestor(int u, int k) {
+    for (int i = 0; i < MAX_L && u; i++)
+        if (k & (1 << i))
+            u = dp[u][i];
+    return u;
+}
+
+int lca(int u, int v) {
+    if (dep[u] < dep[v]) swap(u, v);
+    u = ancestor(u, dep[u] - dep[v]);
+    if (u == v) return u;
+    for (int i = MAX_L - 1; i >= 0; i--)
+        if (dp[u][i] != dp[v][i])
+            u = dp[u][i], v = dp[v][i];
+    return dp[u][0];
+}
+
 void solve() {
-    cin >> n;
-    for (int i = 0; i < n - 1; i++) {
-        int u, v; cin >> u >> v;
+    cin >> n >> q;
+    for (int v = 2; v <= n; v++) {
+        int u; cin >> u;
         adj[u].push_back(v);
-        adj[v].push_back(u);
     }
-    dfs(1); 
-    dfs(mx);
-    cout << dist[mx] << "\n";
+    dfs(1);
+    while (q--) {
+        int a, b; cin >> a >> b;
+        cout << lca(a, b) << "\n";
+    }
+    cout << "\n";
 }
 
 int main() {

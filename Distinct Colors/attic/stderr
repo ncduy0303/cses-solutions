@@ -1,0 +1,7 @@
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Distinct Colors/main.cpp:[m[K In function ‘[01m[Kvoid dfs(int, int)[m[K’:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Distinct Colors/main.cpp:55:26:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kfor[m[K’
+   55 |     arr.push_back(col[u])
+      |                          [01;31m[K^[m[K
+      |                          [32m[K;[m[K
+   56 |     [32m[Kfor[m[K (int v : adj[u]) {
+      |     [32m[K~~~[m[K                   

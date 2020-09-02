@@ -1,0 +1,8 @@
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Path Queries/main.cpp:[m[K In function ‘[01m[Kvoid update(int, int)[m[K’:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Path Queries/main.cpp:32:12:[m[K [01;31m[Kerror: [m[K‘[01m[Ki[m[K’ was not declared in this scope
+   32 |     for (++[01;31m[Ki[m[K; x <= n; x += LSOne(x))
+      |            [01;31m[K^[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Path Queries/main.cpp:[m[K In function ‘[01m[Kll sum(int)[m[K’:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Path Queries/main.cpp:38:12:[m[K [01;31m[Kerror: [m[K‘[01m[Ki[m[K’ was not declared in this scope
+   38 |     for (++[01;31m[Ki[m[K; x; x -= LSOne(x))
+      |            [01;31m[K^[m[K
