@@ -1,0 +1,4 @@
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Range Updates and Sums/main.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Range Updates and Sums/main.cpp:106:50:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Ksum[m[K’ in ‘[01m[Kquery(1, 1, N, a, b)[m[K’, which is of non-class type ‘[01m[Kll[m[K’ {aka ‘[01m[Klong long int[m[K’}
+  106 |         if (t == 3) cout << query(1, 1, N, a, b).[01;31m[Ksum[m[K << "\n";
+      |                                                  [01;31m[K^~~[m[K

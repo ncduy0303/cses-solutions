@@ -26,19 +26,8 @@ typedef vector<vi> vvi;
 
 void solve() {
     int n; cin >> n;
-    for (ll i = 1; i <= n; i++) { 
-        // precompute answer for i < 5
-        if (i == 1) cout << "0\n";
-        else if (i == 2) cout << "6\n";
-        else if (i == 3) cout << "28\n";
-        else if (i == 4) cout << "96\n";
-        else { // formula for n >= 5
-            ll center = (i - 4) * (i - 4) * (i * i - 9);
-            ll corner = (i * i - 3) + (i * i - 5) + 2 * (i * i - 4);
-            ll middle = (i - 4) * (i * i - 5) + (i - 4) * (i * i - 7); 
-            ll ans = (center + 4 * (corner + middle)) / 2; // remove overcounting
-            cout << ans << "\n";
-        }
+    for (ll i = 1; i <= n; i++) { // No. of ways 2 knights attacking each other = 2 * no. of 2x3 / 3x2 rectangles 
+        cout << i * i * (i * i - 1) / 2 - 4 * (i - 1) * (i - 2) << "\n";
     }
 }
 

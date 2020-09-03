@@ -1,0 +1,7 @@
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Range Queries and Copies/main.cpp:[m[K In function ‘[01m[Kll query(tdata, int, int, int, int)[m[K’:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Range Queries and Copies/main.cpp:112:39:[m[K [01;31m[Kerror: [m[K‘[01m[Ku[m[K’ was not declared in this scope
+  112 |     return query(node->l, start, mid, [01;31m[Ku[m[K, v) + query(node->r, mid+1, end, l, r);
+      |                                       [01;31m[K^[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Range Queries and Copies/main.cpp:112:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kv[m[K’ was not declared in this scope
+  112 |     return query(node->l, start, mid, u, [01;31m[Kv[m[K) + query(node->r, mid+1, end, l, r);
+      |                                          [01;31m[K^[m[K

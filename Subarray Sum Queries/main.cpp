@@ -7,7 +7,7 @@ using namespace __gnu_pbds;
 
 typedef tree<int, null_type, less_equal<int>, rb_tree_tag, tree_order_statistics_node_update> ordered_set;
 
-const int MAX_N = 1e5 + 5;
+const int MAX_N = 2e5 + 5;
 const int MAX_L = 20; // ~ Log N
 const long long MOD = 1e9 + 7;
 const long long INF = 1e9 + 7;
