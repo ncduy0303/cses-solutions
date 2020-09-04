@@ -29,7 +29,7 @@ typedef struct ptr {
     ll sum;
 } *tdata;
  
-int N, Q, arr[MAX_N], cnt;
+int N, Q, arr[MAX_N], nVer;
 tdata ver[MAX_N];
  
 tdata init() {
@@ -79,7 +79,7 @@ ll query(tdata node, int start, int end, int l, int r) {
 void solve() {
     cin >> N >> Q;
     for (int i = 1; i <= N; i++) cin >> arr[i];
-    build(ver[++cnt], 1, N);
+    build(ver[++nVer], 1, N);
     while (Q--) {
         int t, k; cin >> t >> k;
         if (t == 1) {
@@ -93,7 +93,7 @@ void solve() {
             cout << query(ver[k], 1, N, a, b) << "\n";
         }
         else {
-            ver[++cnt] = ver[k];
+            ver[++nVer] = ver[k];
         }
     }
 }

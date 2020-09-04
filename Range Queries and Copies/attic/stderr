@@ -1,7 +1,17 @@
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Range Queries and Copies/main.cpp:[m[K In function ‘[01m[Kll query(tdata, int, int, int, int)[m[K’:
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Range Queries and Copies/main.cpp:112:39:[m[K [01;31m[Kerror: [m[K‘[01m[Ku[m[K’ was not declared in this scope
-  112 |     return query(node->l, start, mid, [01;31m[Ku[m[K, v) + query(node->r, mid+1, end, l, r);
-      |                                       [01;31m[K^[m[K
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Range Queries and Copies/main.cpp:112:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kv[m[K’ was not declared in this scope
-  112 |     return query(node->l, start, mid, u, [01;31m[Kv[m[K) + query(node->r, mid+1, end, l, r);
-      |                                          [01;31m[K^[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Range Queries and Copies/main.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Range Queries and Copies/main.cpp:87:30:[m[K [01;31m[Kerror: [m[Kconversion from ‘[01m[Ktdata*[m[K’ to non-scalar type ‘[01m[Ktdata[m[K’ requested
+   87 |             tdata node = [01;31m[Kinit()[m[K;
+      |                          [01;31m[K~~~~^~[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Range Queries and Copies/main.cpp:88:20:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Ktdata[m[K’ to ‘[01m[Ktdata*[m[K’
+   88 |             update([01;31m[Knode[m[K, ver[k], 1, N, a, x);
+      |                    [01;31m[K^~~~[m[K
+      |                    [01;31m[K|[m[K
+      |                    [01;31m[Ktdata[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Range Queries and Copies/main.cpp:54:20:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid update(tdata*, tdata*, int, int, int, int)[m[K’
+   54 | void update([01;36m[Ktdata *node[m[K, tdata *pre_node, int start, int end, int idx, int val) {
+      |             [01;36m[K~~~~~~~^~~~[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Range Queries and Copies/main.cpp:89:22:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Ktdata[m[K’ to ‘[01m[Ktdata*[m[K’ in assignment
+   89 |             ver[k] = [01;31m[Knode[m[K;
+      |                      [01;31m[K^~~~[m[K
+      |                      [01;31m[K|[m[K
+      |                      [01;31m[Ktdata[m[K
