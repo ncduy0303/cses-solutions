@@ -22,24 +22,20 @@ typedef vector<vi> vvi;
 #define LSOne(S) (S & (-S))
 #define isBitSet(S, i) ((S >> i) & 1)
 
-int n, m, par[MAX_N];
-vi adj[MAX_N], ans;
+int n, m, visited[MAX_N], par[MAX_N];
+vi adj[MAX_N], topo;
 
-void dfs(int u, int p = -1) {
-    par[u] = p;
+void dfs(int u) {
+    visited[u] = 1;
     for (int v : adj[u]) {
-        if (v == p) continue;
-        if (par[v]) {
-            vi ans = {v};
-            for (int i = u; i != par[v]; i = par[i]) ans.push_back(i);
-            reverse(ans.begin(), ans.end());
-            cout << ans.size() << "\n";
-            for (int x : ans) cout << x << " ";
-            cout << "\n";
+        if (!visited[v]) dfs(v);
+        else if (visited[v] == 1) {
+            cout << "IMPOSSIBLE\n";
             exit(0);
         }
-        else dfs(v, u);
-    }   
+    }
+    visited[u] = 2;
+    topo.push_back(u);
 }
 
 void solve() {
@@ -47,12 +43,34 @@ void solve() {
     for (int i = 0; i < m; i++) {
         int u, v; cin >> u >> v;
         adj[u].push_back(v);
-        adj[v].push_back(u);
     }
     for (int i = 1; i <= n; i++)
-        if (!par[i])
+        if (!visited[i])
             dfs(i);
-    cout << "IMPOSSIBLE\n";
+    reverse(topo.begin(), topo.end());
+    
+    vi dp(n + 1, 0); 
+    dp[1] = 1; par[1] = -1;
+    for (int u : topo) {
+        if (u == n) break;
+        if (dp[u]) {
+            for (int v : adj[u]) {
+                if (dp[u] + 1 > dp[v]) {
+                    dp[v] = dp[u] + 1;
+                    par[v] = u;
+                } 
+            }
+        }
+    }
+    if (!dp[n]) cout << "IMPOSSIBLE\n";
+    else {
+        vi ans;
+        for (int i = n; i != -1; i = par[i]) ans.push_back(i);
+        reverse(ans.begin(), ans.end());
+        cout << ans.size() << "\n";
+        for (int x : ans) cout << x << " ";
+        cout << "\n";
+    }
 }
 
 int main() {

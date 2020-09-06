@@ -7,7 +7,7 @@ using namespace __gnu_pbds;
 
 typedef tree<int, null_type, less_equal<int>, rb_tree_tag, tree_order_statistics_node_update> ordered_set;
 
-const int MAX_N = 1e5 + 5;
+const int MAX_N = 3e3 + 5;
 const int MAX_L = 20; // ~ Log N
 const long long MOD = 1e9 + 7;
 const long long INF = 1e15 + 7;
@@ -22,41 +22,47 @@ typedef vector<vi> vvi;
 #define LSOne(S) (S & (-S))
 #define isBitSet(S, i) ((S >> i) & 1)
 
-int n, m;
-vii adj[2][MAX_N];
-vi dist[2];
-
-void dijkstra(int s, int t) {
-    priority_queue<ii, vii, greater<ii>> pq;
-    pq.push({0, s});
-    dist[t].assign(n + 1, INF);
-    dist[t][s] = 0;
-    while (!pq.empty()) { 
-        auto [d, u] = pq.top(); pq.pop();
-        if (d > dist[t][u]) continue;
-        for (auto [v, w] : adj[t][u]) {
-            if (dist[t][v] > dist[t][u] + w) {
-                dist[t][v] = dist[t][u] + w;
-                pq.push({dist[t][v], v});
-            }
-        }
-    } 
-}
+int n, m, par[MAX_N];
+vii adj[MAX_N];
 
 void solve() {
     cin >> n >> m;
     for (int i = 0; i < m; i++) {
         int u, v, w; cin >> u >> v >> w;
-        adj[0][u].push_back({v, w});
-        adj[1][v].push_back({u, w});
+        adj[u].push_back({v, w});
     }
-    dijkstra(1, 0); 
-    dijkstra(n, 1);
-    ll ans = INF;
-    for (int u = 1; u <= n; u++)
-        for (auto [v, w] : adj[0][u])
-            ans = min(ans, dist[0][u] + dist[1][v] + w / 2);
-    cout << ans << "\n";
+    vi dist(n + 1, INF);
+    dist[1] = 0;
+    for (int i = 0; i < n - 1; i++) {
+        for (int u = 1; u <= n; u++) {
+            for (auto [v, w] : adj[u]) {
+                if (dist[u] + w < dist[v]) {
+                    par[v] = u;
+                    dist[v] = dist[u] + w;
+                }
+            }
+        }
+    }
+    int cycle = 0;
+    for (int u = 1; u <= n; u++) {
+        for (auto [v, w] : adj[u]) {
+            if (dist[u] + w < dist[v]) {
+                cycle = v; 
+                break;
+            }
+        }
+    }
+    if (!cycle) cout << "NO\n";
+    else {
+        cout << "YES\n";
+        for (int i = 0; i < n; i++) cycle = par[cycle];
+        vi ans = {cycle};
+        for (int i = par[cycle]; i != cycle; i = par[i]) ans.push_back(i);
+        ans.push_back(cycle);
+        reverse(ans.begin(), ans.end());
+        for (int x : ans) cout << x << " ";
+        cout << "\n";
+    }
 }
 
 int main() {

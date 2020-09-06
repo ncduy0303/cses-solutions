@@ -22,14 +22,17 @@ typedef vector<vi> vvi;
 #define LSOne(S) (S & (-S))
 #define isBitSet(S, i) ((S >> i) & 1)
 
-int n, m, par[MAX_N];
-vi adj[MAX_N], ans;
+int n, m, visited[MAX_N], par[MAX_N];
+vi adj[MAX_N];
 
-void dfs(int u, int p = -1) {
-    par[u] = p;
+void dfs(int u) {
+    visited[u] = 1;
     for (int v : adj[u]) {
-        if (v == p) continue;
-        if (par[v]) {
+        if (!visited[v]) {
+            par[v] = u;
+            dfs(v);
+        } 
+        else if (visited[v] == 1) {
             vi ans = {v};
             for (int i = u; i != par[v]; i = par[i]) ans.push_back(i);
             reverse(ans.begin(), ans.end());
@@ -38,8 +41,8 @@ void dfs(int u, int p = -1) {
             cout << "\n";
             exit(0);
         }
-        else dfs(v, u);
-    }   
+    }
+    visited[u] = 2;
 }
 
 void solve() {
@@ -47,10 +50,9 @@ void solve() {
     for (int i = 0; i < m; i++) {
         int u, v; cin >> u >> v;
         adj[u].push_back(v);
-        adj[v].push_back(u);
     }
     for (int i = 1; i <= n; i++)
-        if (!par[i])
+        if (!visited[i])    
             dfs(i);
     cout << "IMPOSSIBLE\n";
 }
