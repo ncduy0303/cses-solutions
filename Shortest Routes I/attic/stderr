@@ -1,0 +1,7 @@
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Shortest Routes I/main.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Shortest Routes I/main.cpp:39:15:[m[K [01;31m[Kerror: [m[K‘[01m[Ku[m[K’ was not declared in this scope
+   39 |         auto {[01;31m[Ku[m[K, d} = pq.top(); pq.pop();
+      |               [01;31m[K^[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Shortest Routes I/main.cpp:39:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kd[m[K’ was not declared in this scope
+   39 |         auto {u, [01;31m[Kd[m[K} = pq.top(); pq.pop();
+      |                  [01;31m[K^[m[K

@@ -1,0 +1,13 @@
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/High Score/main.cpp:[m[K In function ‘[01m[Kvoid dfs(int)[m[K’:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/High Score/main.cpp:35:14:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+   35 | void solve() [01;31m[K{[m[K
+      |              [01;31m[K^[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/High Score/main.cpp:66:12:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+   66 | int main() [01;31m[K{[m[K
+      |            [01;31m[K^[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/High Score/main.cpp:77:1:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+   77 | [01;31m[K}[m[K
+      | [01;31m[K^[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/High Score/main.cpp:28:17:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+   28 | void dfs(int u) [01;36m[K{[m[K
+      |                 [01;36m[K^[m[K

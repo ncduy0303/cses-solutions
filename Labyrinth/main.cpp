@@ -22,42 +22,55 @@ typedef vector<vi> vvi;
 #define LSOne(S) (S & (-S))
 #define isBitSet(S, i) ((S >> i) & 1)
 
-int n, m, visited[MAX_N][MAX_N];
+int n, m, par[MAX_N][MAX_N];
+array<int, 2> A, B;
 char grid[MAX_N][MAX_N];
 
 const int di[] = {1, 0, -1, 0};
 const int dj[] = {0, -1, 0, 1};
+const string dc = "DLUR";
 
 bool valid(int i, int j) {
     return i >= 0 && j >= 0 && i < n && j < m && grid[i][j] == '.';
 }
 
-void dfs(int i, int j) {
-    visited[i][j] = 1;
-    for (int k = 0; k < 4; k++) {
-        int ni = i + di[k], nj = j + dj[k];
-        if (valid(ni, nj) && !visited[ni][nj]) {
-            dfs(ni, nj);
-        }
-    }
-}
-
 void solve() {
     cin >> n >> m;
-    for (int i = 0; i < n; i++) 
-        for (int j = 0; j < m; j++)
-            cin >> grid[i][j];
-    
-    int ans = 0;
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
-            if (valid(i, j) && !visited[i][j]) {
-                dfs(i, j);
-                ans++;
+            cin >> grid[i][j];
+            if (grid[i][j] == 'A') A = {i, j};
+            if (grid[i][j] == 'B') B = {i, j}, grid[i][j] = '.';
+        }
+    }
+    queue<array<int, 2>> q;
+    q.push(A);
+    par[A[0]][A[1]] = -1;
+    while (!q.empty()) {
+        auto [i, j] = q.front(); q.pop();
+        if (array<int, 2> {i, j} == B) { // reach the end
+            cout << "YES\n";
+            string ans;
+            int k = par[i][j];
+            while (k != -1) { // backtracking
+                i -= di[k]; j -= dj[k]; 
+                ans += dc[k];
+                k = par[i][j];
+            }
+            reverse(ans.begin(), ans.end());
+            cout << ans.size() << "\n" << ans << "\n";
+            return;
+        }
+        for (int k = 0; k < 4; k++) {
+            int ni = i + di[k], nj = j + dj[k];
+            if (valid(ni, nj)) {
+                grid[ni][nj] = grid[i][j];
+                if (grid[ni][nj] == 'A') par[ni][nj] = k;
+                q.push({ni, nj});
             }
         }
     }
-    cout << ans << "\n";
+    cout << "NO\n";
 }
 
 int main() {

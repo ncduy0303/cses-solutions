@@ -1,0 +1,4 @@
+/tmp/cctSS9Db.o: in function `__static_initialization_and_destruction_0(int, int)':
+/usr/include/c++/9/iostream:74:(.text+0x40b): relocation truncated to fit: R_X86_64_PC32 against `.bss'
+/usr/include/c++/9/iostream:74:(.text+0x41e): relocation truncated to fit: R_X86_64_PC32 against `.bss'
+collect2: error: ld returned 1 exit status
