@@ -1,0 +1,13 @@
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Road Construction/main.cpp:[m[K In function ‘[01m[Kvoid unite(int, int)[m[K’:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Road Construction/main.cpp:33:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kx[m[K’ was not declared in this scope
+   33 |     if (sz[[01;31m[Kx[m[K] > sz[y]) swap(x, y);
+      |            [01;31m[K^[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Road Construction/main.cpp:33:20:[m[K [01;31m[Kerror: [m[K‘[01m[Ky[m[K’ was not declared in this scope
+   33 |     if (sz[x] > sz[[01;31m[Ky[m[K]) swap(x, y);
+      |                    [01;31m[K^[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Road Construction/main.cpp:34:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kx[m[K’ was not declared in this scope
+   34 |     par[[01;31m[Kx[m[K] = y;
+      |         [01;31m[K^[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Road Construction/main.cpp:34:14:[m[K [01;31m[Kerror: [m[K‘[01m[Ky[m[K’ was not declared in this scope
+   34 |     par[x] = [01;31m[Ky[m[K;
+      |              [01;31m[K^[m[K

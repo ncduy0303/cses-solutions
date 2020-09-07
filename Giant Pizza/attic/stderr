@@ -1,0 +1,7 @@
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Giant Pizza/main.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Giant Pizza/main.cpp:46:68:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kadj[m[K’
+   46 |         cout << u1 << " " << ~u1 << " " << u2 << " " << ~u2 << "\n"
+      |                                                                    [01;31m[K^[m[K
+      |                                                                    [32m[K;[m[K
+   47 |         [32m[Kadj[m[K[0][~u1].push_back(u2);
+      |         [32m[K~~~[m[K                                                         

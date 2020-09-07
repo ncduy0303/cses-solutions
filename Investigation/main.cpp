@@ -31,21 +31,28 @@ void solve() {
         int u, v, w; cin >> u >> v >> w;
         adj[u].push_back({v, w});
     }
-    vi dist(n + 1, INF);
+    vi dist(n + 1, INF), mn(n + 1, INF), mx(n + 1, 0), cnt(n + 1, 0);
     priority_queue<ii, vii, greater<ii>> pq;
-    pq.push({0, 1}); dist[1] = 0;
+    pq.push({0, 1}); dist[1] = mn[1] = mx[1] = 0; cnt[1] = 1;
     while (!pq.empty()) {
         auto [d, u] = pq.top(); pq.pop();
         if (d > dist[u]) continue;
         for (auto [v, w] : adj[u]) {
             if (dist[v] > dist[u] + w) {
                 dist[v] = dist[u] + w;
+                cnt[v] = cnt[u];
+                mn[v] = mn[u] + 1;
+                mx[v] = mx[u] + 1;
                 pq.push({dist[v], v});
+            }
+            else if (dist[v] == dist[u] + w) {
+                (cnt[v] += cnt[u]) %= MOD;
+                mn[v] = min(mn[v], mn[u] + 1);
+                mx[v] = max(mx[v], mx[u] + 1);
             }
         }
     } 
-    for (int i = 1; i <= n; i++) cout << dist[i] << " ";
-    cout << "\n";
+    cout << dist[n] << " " << cnt[n] << " " << mn[n] << " " << mx[n] << "\n";
 }
 
 int main() {

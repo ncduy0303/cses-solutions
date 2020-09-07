@@ -1,0 +1,5 @@
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Knight's Tour/main.cpp:[m[K In function ‘[01m[Kbool valid(ll, ll)[m[K’:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Knight's Tour/main.cpp:37:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kvis[m[K’ was not declared in this scope; did you mean ‘[01m[Kvii[m[K’?
+   37 |     if(x<0 or x>=8 or y<0 or y>=8 or [01;31m[Kvis[m[K[x][y])
+      |                                      [01;31m[K^~~[m[K
+      |                                      [32m[Kvii[m[K

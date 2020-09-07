@@ -10,42 +10,48 @@ typedef tree<int, null_type, less_equal<int>, rb_tree_tag, tree_order_statistics
 const int MAX_N = 1e5 + 5;
 const int MAX_L = 20; // ~ Log N
 const long long MOD = 1e9 + 7;
-const long long INF = 1e15 + 7;
+const long long INF = 1e9 + 7;
 const double EPS = 1e-9;
 
 typedef long long ll;
-typedef vector<ll> vi;
-typedef pair<ll,ll> ii;
+typedef vector<int> vi;
+typedef pair<int,int> ii;
 typedef vector<ii> vii;
 typedef vector<vi> vvi;
 
 #define LSOne(S) (S & (-S))
 #define isBitSet(S, i) ((S >> i) & 1)
 
-int n, m;
-vii adj[MAX_N];
+int n, m, par[MAX_N];
+vector<array<int,3>> edge;
+
+int find(int u) {
+    return u == par[u] ? u : par[u] = find(par[u]);
+}
+
+void unite(int u, int v) {
+    par[find(u)] = find(v);
+}
 
 void solve() {
     cin >> n >> m;
     for (int i = 0; i < m; i++) {
         int u, v, w; cin >> u >> v >> w;
-        adj[u].push_back({v, w});
+        edge.push_back({w, u, v});
     }
-    vi dist(n + 1, INF);
-    priority_queue<ii, vii, greater<ii>> pq;
-    pq.push({0, 1}); dist[1] = 0;
-    while (!pq.empty()) {
-        auto [d, u] = pq.top(); pq.pop();
-        if (d > dist[u]) continue;
-        for (auto [v, w] : adj[u]) {
-            if (dist[v] > dist[u] + w) {
-                dist[v] = dist[u] + w;
-                pq.push({dist[v], v});
-            }
+    sort(edge.begin(), edge.end());
+    for (int i = 1; i <= n; i++) par[i] = i;
+    ll cnt = 0, ans = 0;
+    for (auto [w, u, v] : edge) {
+        u = find(u), v = find(v);
+        if (u != v) {
+            par[u] = v;
+            ans += w;
+            cnt++;
         }
-    } 
-    for (int i = 1; i <= n; i++) cout << dist[i] << " ";
-    cout << "\n";
+    }
+    if (cnt == n - 1) cout << ans << "\n";
+    else cout << "IMPOSSIBLE\n";
 }
 
 int main() {
