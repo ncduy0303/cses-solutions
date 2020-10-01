@@ -1,0 +1,9 @@
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Police Chase/main.cpp:[m[K In constructor ‘[01m[Kmax_flow_graph::max_flow_graph(int)[m[K’:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Police Chase/main.cpp:19:41:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[Kvis[m[K’
+   19 |     max_flow_graph(int V): V(V), adj(V) [01;31m[Kvis[m[K(V) {}
+      |                                         [01;31m[K^~~[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Police Chase/main.cpp:[m[K In member function ‘[01m[Kbool max_flow_graph::bfs(int, int)[m[K’:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Police Chase/main.cpp:35:22:[m[K [01;31m[Kerror: [m[Konly 3 names provided for structured binding
+   35 |                 auto [01;31m[K[v, cap, flow][m[K = edges[idx];
+      |                      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Police Chase/main.cpp:35:22:[m[K [01;36m[Knote: [m[Kwhile ‘[01m[Kstd::array<long long int, 4>[m[K’ decomposes into 4 elements

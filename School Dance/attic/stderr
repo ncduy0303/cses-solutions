@@ -1,0 +1,4 @@
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/School Dance/main.cpp:[m[K In member function ‘[01m[Kvoid max_flow_graph::print_path(int, int, int, int)[m[K’:
+[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/School Dance/main.cpp:85:32:[m[K [01;31m[Kerror: [m[K‘[01m[Ki[m[K’ was not declared in this scope
+   85 |             for (int idx : adj[[01;31m[Ki[m[K]) {
+      |                                [01;31m[K^[m[K
