@@ -1,4 +1,0 @@
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Round Trip/main.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Round Trip/main.cpp:54:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kvisited[m[K’ was not declared in this scope
-   54 |         if (![01;31m[Kvisited[m[K[i])
-      |              [01;31m[K^~~~~~~[m[K

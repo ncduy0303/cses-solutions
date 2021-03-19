@@ -1,100 +1,82 @@
 #include <bits/stdc++.h>
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
 
 using namespace std;
-using namespace __gnu_pbds;
 
-typedef tree<int, null_type, less_equal<int>, rb_tree_tag, tree_order_statistics_node_update> ordered_set;
+#define ar array
+#define ll long long
 
-const int MAX_N = 2e5 + 5;
-const int MAX_L = 20; // ~ Log N
-const long long MOD = 1e9 + 7;
-const long long INF = 1e9 + 7;
-const double EPS = 1e-9;
+const int MAX_N = 1e5 + 1;
+const ll MOD = 1e9 + 7;
+const ll INF = 1e9;
 
-typedef long long ll;
-typedef vector<int> vi;
-typedef pair<int,int> ii;
-typedef vector<ii> vii;
-typedef vector<vi> vvi;
-
-#define LSOne(S) (S & (-S))
-#define isBitSet(S, i) ((S >> i) & 1)
-
-struct tdata {
-    ll sum, pref, suff, ans;
-    tdata() {
-        sum = pref = suff = ans = 0;
+struct segtree { 
+    struct tdata {
+		ll sum, mxps, mxss, mxsas;
+		tdata(): sum(), mxps() {}
+		tdata(ll val): sum(val), mxps(max(val, 0ll)), mxss(max(val, 0ll)), mxsas(max(val, 0ll)){}
+		tdata(tdata l, tdata r): sum(l.sum + r.sum), mxps(max(l.mxps, l.sum + r.mxps)) {}
+	};
+    int ln(int node) {return 2 * node;}
+    int rn(int node) {return 2 * node + 1;}
+    int n; vector<tdata> st;
+    segtree(int n): n(n), st(4 * n) {}
+    segtree(vector<int> &arr) : segtree(arr.size()) {
+        build(arr, 1, 0, n - 1);
     }
-    tdata(int val) {
-        sum = val;
-        pref = suff = ans = max(0, val);
+    void apply(int node, int start, int end, ll val) {
+        st[node].sum = val;
+		st[node].mxps = max(val, 0ll);
+		st[node].mxss = max(val, 0ll);
+		st[node].mxsas = max(val, 0ll);
     }
-    tdata(tdata l, tdata r) {
-        sum = l.sum + r.sum;
-        pref = max(l.pref, l.sum + r.pref);
-        suff = max(r.suff, r.sum + l.suff);
-        ans = max({l.ans, r.ans, l.suff + r.pref});
+    void combine(int node) {
+        st[node].sum = st[ln(node)].sum + st[rn(node)].sum;
+		st[node].mxps = max(st[ln(node)].mxps, st[ln(node)].sum + st[rn(node)].mxps);
+		st[node].mxss = max(st[rn(node)].mxss, st[rn(node)].sum + st[ln(node)].mxss);
+		st[node].mxsas = max({st[ln(node)].mxsas, st[rn(node)].mxsas, st[ln(node)].mxss + st[rn(node)].mxps});
     }
+    void build(vector<int> &arr, int node, int start, int end) {
+        if (start == end) {
+            st[node] = tdata(arr[start]);
+            return;
+        }
+        int mid = (start + end) / 2;
+        build(arr, ln(node), start, mid);
+        build(arr, rn(node), mid + 1, end);
+        combine(node);
+    }
+    void update(int node, int start, int end, int idx, ll val) {
+        if (start == end) {
+            apply(node, start, end, val);
+            return;
+        }
+        int mid = (start + end) / 2;
+        if (idx <= mid) update(ln(node), start, mid, idx, val);
+        else update(rn(node), mid + 1, end, idx, val);
+        combine(node);
+    }
+    void update(int idx, ll val) {update(1, 0, n - 1, idx, val);}
 };
- 
-int N, Q, arr[MAX_N];
-tdata st[4 * MAX_N];
- 
-void build(int node, int start, int end) {
-    if (start == end) {
-        st[node] = tdata(arr[start]);
-        return;
-    }
-    int mid = (start + end) / 2;
-    build(2 * node, start, mid);
-    build(2 * node + 1, mid + 1, end);
-    st[node] = tdata(st[2 * node], st[2 * node + 1]);
-}
- 
-void update(int node, int start, int end, int idx, int val) {
-    if (start == end) {
-        arr[idx] = val;
-        st[node] = tdata(val);
-        return;
-    }
-    int mid = (start + end) / 2;
-    if (idx <= mid) update(2 * node, start, mid, idx, val);
-    else update(2 * node + 1, mid + 1, end, idx, val);
-    st[node] = tdata(st[2 * node], st[2 * node + 1]);
-}
- 
-tdata query(int node, int start, int end, int l, int r) {
-    if (start > r || end < l) return tdata(0);
-    if (l <= start && end <= r) return st[node];
-    int mid = (start + end) / 2;
-    return tdata(query(2 * node, start, mid, l, r),
-                 query(2 * node + 1, mid + 1, end, l, r));
-}
- 
+
 void solve() {
-    cin >> N >> Q;
-    for (int i = 1; i <= N; i++) cin >> arr[i];
-    build(1, 1, N);
-    while (Q--) {
-        int k, x; cin >> k >> x;
-        update(1, 1, N, k, x);
-        cout << query(1, 1, N, 1, N).ans << "\n";
-        // this is the same as 
-        // cout << st[1].ans << "\n";
-    }
+    int n, q; cin >> n >> q;
+	vector<int> a(n);
+	for (int &x : a) cin >> x;
+	segtree st(a);
+	while (q--) {
+		int x, v; cin >> x >> v; x--;
+		st.update(x, v);
+		cout << st.st[1].mxsas << "\n";
+	}
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
-    //freopen("input.txt", "r", stdin);
-    //freopen("output.txt", "w", stdout);
-
-    int tc; tc = 1;
+    int tc = 1;
+    // cin >> tc;
     for (int t = 1; t <= tc; t++) {
-        //cout << "Case #" << t  << ": ";
+        // cout << "Case #" << t  << ": ";
         solve();
     }
 }

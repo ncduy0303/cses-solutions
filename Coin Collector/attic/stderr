@@ -1,4 +1,0 @@
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Coin Collector/main.cpp:[m[K In function ‘[01m[Kll memo(int)[m[K’:
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Coin Collector/main.cpp:57:18:[m[K [01;31m[Kerror: [m[K‘[01m[KSCC[m[K’ was not declared in this scope
-   57 |     for (int v : [01;31m[KSCC[m[K[u])
-      |                  [01;31m[K^~~[m[K

@@ -1,4 +1,0 @@
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Array Description/main.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Array Description/main.cpp:33:21:[m[K [01;31m[Kerror: [m[K‘[01m[Karr[m[K’ was not declared in this scope
-   33 |         dp[0][i] = ([01;31m[Karr[m[K[0] == 0 || arr[0] == i);
-      |                     [01;31m[K^~~[m[K

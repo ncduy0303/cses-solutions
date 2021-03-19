@@ -1,113 +1,124 @@
 #include <bits/stdc++.h>
- 
+
 using namespace std;
- 
+
 #define ar array
 #define ll long long
- 
+
 const int MAX_N = 1e5 + 1;
-const int MOD = 1e9 + 7;
-const int INF = 1e9;
-const ll LINF = 1e18;
- 
+const ll MOD = 1e9 + 7;
+const ll INF = 1e9;
+
 struct max_flow_graph {
-    int V;
-    vector<ar<ll,4>> edges; // {start, dest, cap, flow}
+    struct edge {
+        int u, v, cap, flow;
+    };
+    int n; 
+    vector<edge> el; 
     vector<vector<int>> adj;
-    vector<int> dist, ans;
-    vector<ar<int,2>> par;
-    max_flow_graph(int V): V(V), adj(V) {}
-    void add_edge(int u, int v) {
-        adj[u].push_back(edges.size());
-        edges.push_back({u, v, 1, 0});
-        adj[v].push_back(edges.size());
-        edges.push_back({v, u, 0, 0});
+    vector<int> dist, par, vis, ans;
+    max_flow_graph(int n) : n(n), adj(n + 1) {}
+    void add_edge(int u, int v, int w) {
+        adj[u].push_back(el.size());
+        el.push_back({u, v, w, 0});
+        adj[v].push_back(el.size());
+        el.push_back({v, u, 0, 0}); 
     }
-    bool bfs(int s, int t) {
-        dist.assign(V, -1);
-        par.assign(V, {-1, -1});
+    int send_one_flow(int s, int e) {
+        int nf = INF;
+        for (int u = e; u != s; u = el[par[u]].u) {
+            nf = min(nf, el[par[u]].cap - el[par[u]].flow);
+        }
+        for (int u = e; u != s; u = el[par[u]].u) {
+            el[par[u]].flow += nf;
+            el[par[u]^1].flow -= nf;
+        }
+        return nf;
+    }
+    bool bfs(int s, int e) {
+        dist.assign(n + 1, INF);
+        par.assign(n + 1, 0);
         queue<int> q;
-        dist[s] = 0; q.push(s);
+        q.push(s); dist[s] = 0;
         while (q.size()) {
             int u = q.front(); q.pop();
-            if (u == t) break;
+            if (u == e) break;
             for (int idx : adj[u]) {
-                auto [pv, v, cap, flow] = edges[idx];
-                if (cap > flow && dist[v] == -1) {
-                    dist[v] = dist[u] + 1;
-                    par[v] = {u, idx};
-                    q.push(v);
+                if (el[idx].cap > el[idx].flow && dist[el[idx].v] > dist[el[idx].u] + 1) {
+                    dist[el[idx].v] = dist[el[idx].u] + 1;
+                    par[el[idx].v] = idx;
+                    q.push(el[idx].v);
                 }
             }
         }
-        return dist[t] != -1;
+        return dist[e] < INF;
     }
-    ll send_one_flow(int s, int t) {
-        ll new_flow = INF;
-        for (int u = t; u != s; u = par[u][0]) {
-            int idx = par[u][1];
-            auto [pv, v, cap, flow] = edges[idx];
-            new_flow = min(new_flow, cap - flow);
-        }
-        for (int u = t; u != s; u = par[u][0]) {
-            int idx = par[u][1];
-            auto [pv, v, cap, flow] = edges[idx];
-            edges[idx][3] += new_flow;
-            edges[idx ^ 1][3] -= new_flow;
-        }
-        return new_flow;
-    }
-    ll edmonds_karp(int s, int t) {
-        ll max_flow = 0;
-        while (bfs(s, t)) {
-            ll new_flow = send_one_flow(s, t);
-            if (!new_flow) break;
-            max_flow += new_flow;
-        }
-        return max_flow;
-    }
-    void dfs(int u = 0) {
-        ans.push_back(u);
-        if (u == V - 1) return;
-        for (int idx : adj[u]) {
-            auto &[pv, v, cap, flow] = edges[idx];
-            if (flow == 1 && idx % 2 == 0) {
-                dfs(v);
-                flow = 0;
-                return;
+    int dfs(int s, int e, int f = INF) {
+        if (s == e || f == 0) return f;
+        for (int idx : adj[s]) {
+            if (dist[el[idx].v] != dist[s] + 1) continue;
+            if (int nf = dfs(el[idx].v, e, min(f, el[idx].cap - el[idx].flow))) {
+                el[idx].flow += nf;
+                el[idx^1].flow -= nf;
+                return nf;
             }
         }
+        return 0;
     }
-    void print_path(int s, int t) {
-        int max_flow = edmonds_karp(s, t);
-        cout << max_flow << "\n";
-        for (int i = 0; i < max_flow; i++) {
-            dfs();
-            cout << ans.size() << "\n";
-            for (int x : ans) cout << x + 1 << " ";
-            cout << "\n";
-            ans.clear();
+    ll edmonds_karp(int s, int e) {
+        ll mf = 0;
+        while (bfs(s, e)) mf += send_one_flow(s, e);
+        return mf;
+    }
+    ll dinic(int s, int e) {
+        ll mf = 0;
+        while (bfs(s, e)) {
+            while (int nf = dfs(s, e)) mf += nf;
         }
+        return mf;
     }
+    void dfs2(int s, int e) {
+		ans.push_back(s);
+		if (s == e) return;
+		for (int idx : adj[s]) {
+			auto &[u, v, cap, flow] = el[idx];
+			if (idx % 2 == 0 && cap == flow && !vis[idx]) {
+				vis[idx] = 1;
+				dfs2(v, e);
+				flow--;
+				return;
+			}
+		}
+	}
+	void print(int s, int e) {
+		ll mf = dinic(s, e);
+		cout << mf << "\n";
+		for (int k = 0; k < mf; k++) {
+			vis.assign(el.size(), 0);
+			dfs2(s, e);
+			cout << ans.size() << "\n";
+			for (int x : ans) cout << x + 1 << " ";
+			cout << "\n";
+			ans.clear();
+		}
+	}
 };
- 
+
 void solve() {
     int n, m; cin >> n >> m;
-    max_flow_graph adj(n);
-    for (int i = 0; i < m; i++) {
-        int u, v; cin >> u >> v; u--; v--;
-        adj.add_edge(u, v);
-    }
-    adj.print_path(0, n - 1);
+	max_flow_graph adj(n);
+	for (int i = 0; i < m; i++) {
+		int u, v; cin >> u >> v; u--; v--;
+		adj.add_edge(u, v, 1);
+	}
+	adj.print(0, n - 1);
 }
- 
+
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
-    // freopen("input.txt", "r", stdin);
-    // freopen("output.txt", "w", stdout);
- 
-    int tc; tc = 1;
+    int tc = 1;
+    // cin >> tc;
     for (int t = 1; t <= tc; t++) {
         // cout << "Case #" << t  << ": ";
         solve();

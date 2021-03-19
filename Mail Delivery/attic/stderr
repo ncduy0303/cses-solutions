@@ -1,7 +1,7 @@
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Mail Delivery/main.cpp:[m[K In function ‘[01m[Kvoid dfs(int)[m[K’:
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Mail Delivery/main.cpp:31:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kv[m[K’ was not declared in this scope
-   31 |         auto {[01;31m[Kv[m[K, e} = adj[u][i].second;
-      |               [01;31m[K^[m[K
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Mail Delivery/main.cpp:31:18:[m[K [01;31m[Kerror: [m[K‘[01m[Ke[m[K’ was not declared in this scope
-   31 |         auto {v, [01;31m[Ke[m[K} = adj[u][i].second;
-      |                  [01;31m[K^[m[K
+[01m[K/mnt/d/CP/CSES - CSES Problem Set/Mail Delivery/main.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
+[01m[K/mnt/d/CP/CSES - CSES Problem Set/Mail Delivery/main.cpp:38:11:[m[K [01;31m[Kerror: [m[Kreturn-statement with a value, in function returning ‘[01m[Kvoid[m[K’ [[01;31m[K-fpermissive[m[K]
+   38 |    return [01;31m[K0[m[K;
+      |           [01;31m[K^[m[K
+[01m[K/mnt/d/CP/CSES - CSES Problem Set/Mail Delivery/main.cpp:44:10:[m[K [01;31m[Kerror: [m[Kreturn-statement with a value, in function returning ‘[01m[Kvoid[m[K’ [[01;31m[K-fpermissive[m[K]
+   44 |   return [01;31m[K0[m[K;
+      |          [01;31m[K^[m[K

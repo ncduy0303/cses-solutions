@@ -1,60 +1,82 @@
 #include <bits/stdc++.h>
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
 
 using namespace std;
-using namespace __gnu_pbds;
 
-typedef tree<int, null_type, less_equal<int>, rb_tree_tag, tree_order_statistics_node_update> ordered_set;
+#define ar array
+#define ll long long
 
-const int MAX_N = 1e5 + 5;
-const int MAX_L = 20; // ~ Log N
-const long long MOD = 1e9 + 7;
-const long long INF = 1e9 + 7;
-const double EPS = 1e-9;
+const int MAX_N = 1e5 + 1;
+const ll MOD = 1e9 + 7;
+const ll INF = 1e9;
 
-typedef long long ll;
-typedef vector<int> vi;
-typedef pair<int,int> ii;
-typedef vector<ii> vii;
-typedef vector<vi> vvi;
-
-#define LSOne(S) (S & (-S))
-#define isBitSet(S, i) ((S >> i) & 1)
-
-int min_rotation(string s) {
-    int ans = 0, n = s.size();
-    s += s; // concatenate the string to itself to simulate rotating string
-    for (int cur = 0; cur < n; cur++) { // complete search with pruning
-        for (int i = 0; i < n; i++) {
-            if (ans + i == cur || s[ans + i] < s[cur + i]) { 
-                cur += max(0, i - 1);
-                break;
-            }
-            if (s[cur + i] < s[ans + i]) {
-                ans = cur;
-                break;
+mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
+ll rand(ll l, ll r) {return uniform_int_distribution(l, r)(rng);}
+const int BASE = rand(300, 1e9);
+const int NUM_MOD = 4;
+const ll MODS[] = {(int)1e9 + 2277};
+struct Hash {
+    vector<ll> H[NUM_MOD], P[NUM_MOD];
+    Hash(string s) {
+        for (int i = 0; i < NUM_MOD; i++) {
+            H[i].push_back(0);
+            P[i].push_back(1);
+        }
+        for (char c : s) {
+            for (int i = 0; i < NUM_MOD; i++) {
+                P[i].push_back(P[i].back() * BASE % MODS[i]);
+                H[i].push_back((H[i].back() * BASE + c) % MODS[i]);
             }
         }
+    } 
+    ar<ll, NUM_MOD> operator()(int l, int r) {
+        ar<ll,NUM_MOD> res;
+        for (int i = 0; i < NUM_MOD; i++) {
+            res[i] = (H[i][r + 1] - H[i][l] * P[i][r + 1 - l]) % MODS[i];
+            if (res[i] < 0) res[i] += MODS[i];
+        }
+        return res;
     }
-    return ans;
+};
+
+bool same(ar<ll,NUM_MOD> a, ar<ll, NUM_MOD> b) {
+    for (int i = 0; i < NUM_MOD; i++) {
+        if (a[i] != b[i]) return false;
+    }
+    return true;
 }
 
 void solve() {
     string s; cin >> s;
+    int n = s.size();
     s += s;
-    cout << s.substr(min_rotation(s), s.size() / 2) << "\n";
+    Hash Hs(s);
+ 
+    auto cmp = [&](int a, int b) {
+        if (s[a] != s[b]) return s[a] < s[b];
+        if (same(Hs(a, a + n - 1), Hs(b, b + n - 1))) return false;
+        int lo = 1, hi = n;
+        while (lo + 1 < hi) {
+            int mid = (lo + hi) / 2;
+            if (same(Hs(a, a + mid - 1), Hs(b, b + mid - 1))) lo = mid;
+            else hi = mid;
+        }
+        return s[a + hi - 1] < s[b + hi - 1];
+    };
+ 
+    int mn = 0;
+    for (int i = 0; i < n; i++) {
+        if (cmp(i, mn)) mn = i;
+    }
+    cout << s.substr(mn, n) << "\n";
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
-    //freopen("input.txt", "r", stdin);
-    //freopen("output.txt", "w", stdout);
-
-    int tc; tc = 1;
+    int tc = 1;
+    // cin >> tc;
     for (int t = 1; t <= tc; t++) {
-        //cout << "Case #" << t  << ": ";
+        // cout << "Case #" << t  << ": ";
         solve();
     }
 }

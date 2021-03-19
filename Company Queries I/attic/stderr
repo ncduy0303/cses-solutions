@@ -1,4 +1,0 @@
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Company Queries I/main.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Company Queries I/main.cpp:55:26:[m[K [01;31m[Kerror: [m[K‘[01m[Ku[m[K’ was not declared in this scope
-   55 |         int p = ancestor([01;31m[Ku[m[K, k);
-      |                          [01;31m[K^[m[K

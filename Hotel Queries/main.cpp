@@ -1,84 +1,84 @@
 #include <bits/stdc++.h>
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
 
 using namespace std;
-using namespace __gnu_pbds;
 
-typedef tree<int, null_type, less_equal<int>, rb_tree_tag, tree_order_statistics_node_update> ordered_set;
+#define ar array
+#define ll long long
 
-const int MAX_N = 2e5 + 5;
-const int MAX_L = 20; // ~ Log N
-const long long MOD = 1e9 + 7;
-const long long INF = 1e9 + 7;
-const double EPS = 1e-9;
+const int MAX_N = 1e5 + 1;
+const ll MOD = 1e9 + 7;
+const ll INF = 1e9;
 
-typedef long long ll;
-typedef vector<int> vi;
-typedef pair<int,int> ii;
-typedef vector<ii> vii;
-typedef vector<vi> vvi;
-
-#define LSOne(S) (S & (-S))
-#define isBitSet(S, i) ((S >> i) & 1)
-
-int N, Q;
-int arr[MAX_N], st[4 * MAX_N];
-
-void build(int node, int start, int end) {
-    if (start == end)
-        st[node] = arr[start];
-    else {
+struct segtree { 
+    struct tdata {
+        ll mx;
+        tdata(): mx(-INF) {}
+        tdata(ll val): mx(val) {}
+        tdata(tdata l, tdata r): mx(max(l.mx, r.mx)) {}
+    };
+    int ln(int node) {return 2 * node;}
+    int rn(int node) {return 2 * node + 1;}
+    int n; vector<tdata> st;
+    segtree(int n): n(n), st(4 * n) {}
+    segtree(vector<int> &arr) : segtree(arr.size()) {
+        build(arr, 1, 0, n - 1);
+    }
+    void apply(int node, int start, int end, ll val) {
+        st[node].mx += val;
+    }
+    void combine(int node) {
+        st[node].mx = max(st[ln(node)].mx, st[rn(node)].mx);
+    }
+    void build(vector<int> &arr, int node, int start, int end) {
+        if (start == end) {
+            st[node] = tdata(arr[start]);
+            return;
+        }
         int mid = (start + end) / 2;
-        build(2 * node, start, mid);
-        build(2 * node + 1, mid + 1, end);
-        st[node] = max(st[2 * node], st[2 * node + 1]);
+        build(arr, ln(node), start, mid);
+        build(arr, rn(node), mid + 1, end);
+        combine(node);
     }
-}
- 
-void update(int node, int start, int end, int idx, int val) {
-    if (start == end) {
-        arr[idx] += val;
-        st[node] += val;
-    }
-    else {
+    void update(int node, int start, int end, int idx, ll val) {
+        if (start == end) {
+            apply(node, start, end, val);
+            return;
+        }
         int mid = (start + end) / 2;
-        if (idx <= mid) update(2 * node, start, mid, idx, val);
-        else update(2 * node + 1, mid + 1, end, idx, val);
-        st[node] = max(st[2 * node], st[2 * node + 1]);
+        if (idx <= mid) update(ln(node), start, mid, idx, val);
+        else update(rn(node), mid + 1, end, idx, val);
+        combine(node);
     }
-}
- 
-int query(int node, int start, int end, int val) {
-    if (start == end) return (st[node] >= val) ? start : 0;
-    int mid = (start + end) / 2;
-    if (st[2 * node] >= val) 
-        return query(2 * node, start, mid, val);
-    else 
-        return query(2 * node + 1, mid + 1, end, val);
-}
+    int find(int node, int start, int end, ll v) {
+		if (start == end) return st[node].mx >= v ? start : -1;
+		int mid = (start + end) / 2;
+		return (st[ln(node)].mx >= v) ? find(ln(node), start, mid, v) : find(rn(node), mid + 1, end, v);
+	}
+	void update(int x, ll v) {update(1, 0, n - 1, x, v);}
+	int find(ll v) {return find(1, 0, n - 1, v);}
+};
 
 void solve() {
-    cin >> N >> Q;
-    for (int i = 1; i <= N; i++) cin >> arr[i];
-    build(1, 1, N);
-    while (Q--) {
-        int val; cin >> val;
-        int idx = query(1, 1, N, val);
-        cout << idx << " ";
-        if (idx) update(1, 1, N, idx, -val);
-    }
+    int n, q; cin >> n >> q;
+	vector<int> a(n);
+	for (int &x : a) cin >> x;
+	segtree st(a);
+	while (q--) {
+		int v; cin >> v;
+		int x = st.find(v);
+		if (x != -1) st.update(x, -v); 
+		cout << x + 1 << " ";
+	}
+	cout << "\n";
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
-    //freopen("input.txt", "r", stdin);
-    //freopen("output.txt", "w", stdout);
-
-    int tc; tc = 1;
+    int tc = 1;
+    // cin >> tc;
     for (int t = 1; t <= tc; t++) {
-        //cout << "Case #" << t  << ": ";
+        // cout << "Case #" << t  << ": ";
         solve();
     }
 }

@@ -1,7 +1,0 @@
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Flight Discount/main.cpp:[m[K In function ‘[01m[Kvoid dijkstra(int, int)[m[K’:
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Flight Discount/main.cpp:31:20:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kdist[m[K’
-   31 |     pq.push({0, s})
-      |                    [01;31m[K^[m[K
-      |                    [32m[K;[m[K
-   32 |     [32m[Kdist[m[K[t].assign(n + 1, INF);
-      |     [32m[K~~~~[m[K            

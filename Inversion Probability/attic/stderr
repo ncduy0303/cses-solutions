@@ -1,8 +1,0 @@
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Inversion Probability/main.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Inversion Probability/main.cpp:37:25:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kdouble[m[K’
-   37 |             double p = ([01;31m[Kdouble[m[K c) / (r[i] * r[j]);
-      |                         [01;31m[K^~~~~~[m[K
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Inversion Probability/main.cpp:37:25:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kdouble[m[K’
-   37 |             double p = [34m[K([m[K[01;31m[Kd[m[K[32m[Kouble[m[K c) / (r[i] * r[j]);
-      |                        [34m[K~[m[K[01;31m[K^[m[K[32m[K~~~~~[m[K
-      |                         [32m[K)[m[K

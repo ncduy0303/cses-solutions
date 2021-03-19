@@ -1,4 +1,0 @@
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Longest Flight Route/main.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Longest Flight Route/main.cpp:52:24:[m[K [01;31m[Kerror: [m[Koperands to ?: have different types ‘[01m[Kint[m[K’ and ‘[01m[Kconst char*[m[K’
-   52 |     cout << ([01;31m[Kdp[0] > 0 ? dp[0] : "IMPOSSIBLE"[m[K) << "\n";
-      |              [01;31m[K~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~[m[K

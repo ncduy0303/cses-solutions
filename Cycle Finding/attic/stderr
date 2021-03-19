@@ -1,4 +1,4 @@
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Cycle Finding/main.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Cycle Finding/main.cpp:50:28:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kbreak[m[K’
-   50 |                 cycle = v, [01;31m[Kbreak[m[K;
-      |                            [01;31m[K^~~~~[m[K
+[01m[K/mnt/d/CP/CSES - CSES Problem Set/Cycle Finding/main.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
+[01m[K/mnt/d/CP/CSES - CSES Problem Set/Cycle Finding/main.cpp:50:12:[m[K [01;31m[Kerror: [m[Kreturn-statement with a value, in function returning ‘[01m[Kvoid[m[K’ [[01;31m[K-fpermissive[m[K]
+   50 |     return [01;31m[K0[m[K;
+      |            [01;31m[K^[m[K

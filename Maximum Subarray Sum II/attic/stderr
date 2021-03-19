@@ -1,9 +1,0 @@
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Maximum Subarray Sum II/main.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Maximum Subarray Sum II/main.cpp:38:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kst[m[K’ was not declared in this scope; did you mean ‘[01m[Kstd[m[K’?
-   38 |         if (i > b) [01;31m[Kst[m[K.erase(st.lower_bound(ps[i - b - 1]));
-      |                    [01;31m[K^~[m[K
-      |                    [32m[Kstd[m[K
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Maximum Subarray Sum II/main.cpp:39:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kst[m[K’ was not declared in this scope; did you mean ‘[01m[Kstd[m[K’?
-   39 |         ans = max(ans, ps[i] - ([01;31m[Kst[m[K.size() == 1 ? 0 : *st.begin()));
-      |                                 [01;31m[K^~[m[K
-      |                                 [32m[Kstd[m[K

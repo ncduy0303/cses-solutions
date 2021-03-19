@@ -1,70 +1,58 @@
 #include <bits/stdc++.h>
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
 
 using namespace std;
-using namespace __gnu_pbds;
 
-typedef tree<int, null_type, less_equal<int>, rb_tree_tag, tree_order_statistics_node_update> ordered_set;
+#define ar array
+#define ll long long
 
-const int MAX_N = 1e5 + 5;
-const int MAX_L = 20; // ~ Log N
-const long long MOD = 1e9 + 7;
-const long long INF = 1e9 + 7;
-const double EPS = 1e-9;
+const int MAX_N = 1e5 + 1;
+const ll MOD = 1e9 + 7;
+const ll INF = 1e9;
 
-typedef long long ll;
-typedef vector<int> vi;
-typedef pair<int,int> ii;
-typedef vector<ii> vii;
-typedef vector<vi> vvi;
-
-#define LSOne(S) (S & (-S))
-#define isBitSet(S, i) ((S >> i) & 1)
-
-int n, m, par[MAX_N];
-vi adj[MAX_N];
+int n, m, dist[MAX_N], pre[MAX_N];
+vector<int> adj[MAX_N];
 
 void solve() {
     cin >> n >> m;
-    for (int i = 0; i < m; i++) {
-        int u, v; cin >> u >> v;
-        adj[u].push_back(v);
-        adj[v].push_back(u);
-    }
-    queue<int> q;
-    q.push(1);
-    par[1] = -1;
-    while (!q.empty()) {
-        int u = q.front(); q.pop();
-        for (int v : adj[u]) {
-            if (!par[v]) {
-                q.push(v);
-                par[v] = u;
-            }
-        }
-    }
-    if (!par[n]) {
-        cout << "IMPOSSIBLE\n";
-        return;
-    }
-    vi ans;
-    for (int i = n; i != -1; i = par[i]) ans.push_back(i);
-    reverse(ans.begin(), ans.end());
-    cout << ans.size() << "\n";
-    for (int x : ans) cout << x << " ";
-    cout << "\n";
+	for (int i = 0; i < m; i++) {
+		int u, v; cin >> u >> v;
+		adj[u].push_back(v);
+		adj[v].push_back(u);
+	}
+	queue<int> q;
+	q.push(1);
+	memset(dist, 0x3f, sizeof dist);
+	dist[1] = 1;
+	pre[1] = 0;
+	while (q.size()) {
+		int u = q.front(); q.pop();
+		for (int v : adj[u]) {
+			if (dist[v] > dist[u] + 1) {
+				dist[v] = dist[u] + 1;
+				pre[v] = u;
+				q.push(v);
+			}
+		}
+	}
+	if (dist[n] < INF) {
+		cout << dist[n] << "\n";
+		vector<int> ans;
+		for (int u = n; u; u = pre[u]) ans.push_back(u);
+		reverse(ans.begin(), ans.end());
+		for (int x : ans) cout << x << " ";
+		cout << "\n";
+	} else {
+		cout << "IMPOSSIBLE\n";
+	}		
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
-    //freopen("input.txt", "r", stdin);
-    //freopen("output.txt", "w", stdout);
-
-    int tc; tc = 1;
+    int tc = 1;
+    // cin >> tc;
     for (int t = 1; t <= tc; t++) {
-        //cout << "Case #" << t  << ": ";
+        // cout << "Case #" << t  << ": ";
         solve();
     }
 }

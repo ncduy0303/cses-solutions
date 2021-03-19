@@ -1,4 +1,0 @@
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Projects/main.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Projects/main.cpp:38:38:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator[][m[K’ (operand types are ‘[01m[Kll [n][m[K’ {aka ‘[01m[Klong long int [n][m[K’} and ‘[01m[Kstd::array<int, 3>[m[K’)
-   38 |             dp[i] = max(dp[i - 1], dp[01;31m[K[[m[K*it] + (ll)arr[i][2]);
-      |                                      [01;31m[K^[m[K

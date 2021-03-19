@@ -1,8 +1,0 @@
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Fibonacci Numbers/main.cpp:43:8:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kqexp[m[K’
-   43 | matrix [01;31m[Kqexp[m[K(matrix A, ll B) {
-      |        [01;31m[K^~~~[m[K
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Fibonacci Numbers/main.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Fibonacci Numbers/main.cpp:54:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kqexp[m[K’ was not declared in this scope; did you mean ‘[01m[Kexp[m[K’?
-   54 |     cout << [01;31m[Kqexp[m[K(A, n + 1).m[0][0] << "\n";
-      |             [01;31m[K^~~~[m[K
-      |             [32m[Kexp[m[K

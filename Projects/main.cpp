@@ -1,55 +1,42 @@
 #include <bits/stdc++.h>
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
 
 using namespace std;
-using namespace __gnu_pbds;
 
-typedef tree<int, null_type, less_equal<int>, rb_tree_tag, tree_order_statistics_node_update> ordered_set;
+#define ar array
+#define ll long long
 
-const int MAX_N = 1e5 + 5;
-const int MAX_L = 20; // ~ Log N
-const long long MOD = 1e9 + 7;
-const long long INF = 1e9 + 7;
-const double EPS = 1e-9;
-
-typedef long long ll;
-typedef vector<int> vi;
-typedef pair<int,int> ii;
-typedef vector<ii> vii;
-typedef vector<vi> vvi;
-
-#define LSOne(S) (S & (-S))
-#define isBitSet(S, i) ((S >> i) & 1)
+const int MAX_N = 1e5 + 1;
+const ll MOD = 1e9 + 7;
+const ll INF = 1e9;
 
 
 
 void solve() {
     int n; cin >> n;
-    array<int, 3> arr[n];
-    for (int i = 0; i < n; i++) cin >> arr[i][1] >> arr[i][0] >> arr[i][2];
-    sort(arr, arr + n); // sort based on ending days
-    ll dp[n];
-    dp[0] = arr[0][2];
+    vector<ar<int,3>> a(n);
+    for (auto &[r, l, v] : a) cin >> l >> r >> v;
+    sort(a.begin(), a.end());
+    vector<ll> dp(n);
+    dp[0] = a[0][2];
     for (int i = 1; i < n; i++) {
-        int k = lower_bound(arr, arr + n, array<int, 3>{arr[i][1], 0, 0}) - arr - 1;
-        if (k >= 0)
-            dp[i] = max(dp[i - 1], dp[k] + (ll)arr[i][2]);
-        else
-            dp[i] = max(dp[i - 1], (ll)arr[i][2]);
-    }
-    cout << dp[n - 1] << "\n";
+        auto [r, l, v] = a[i];
+        int j = lower_bound(a.begin(), a.end(), ar<int,3>{l, -1, -1}) - a.begin() - 1;
+        if (j >= 0) {
+            dp[i] = max(dp[i - 1], dp[j] + v);
+        } else {
+            dp[i] = max(dp[i - 1], (ll)v);
+        }
+    } 
+    cout << dp.back() << "\n";
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
-    //freopen("input.txt", "r", stdin);
-    //freopen("output.txt", "w", stdout);
-
-    int tc; tc = 1;
+    int tc = 1;
+    // cin >> tc;
     for (int t = 1; t <= tc; t++) {
-        //cout << "Case #" << t  << ": ";
+        // cout << "Case #" << t  << ": ";
         solve();
     }
 }

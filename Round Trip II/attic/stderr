@@ -1,9 +1,0 @@
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Round Trip II/main.cpp:28:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kvoi[m[K’ does not name a type; did you mean ‘[01m[Kvvi[m[K’?
-   28 | [01;31m[Kvoi[m[K dfs(int u) {
-      | [01;31m[K^~~[m[K
-      | [32m[Kvvi[m[K
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Round Trip II/main.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Round Trip II/main.cpp:56:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kdfs[m[K’ was not declared in this scope; did you mean ‘[01m[Kffs[m[K’?
-   56 |             [01;31m[Kdfs[m[K(i);
-      |             [01;31m[K^~~[m[K
-      |             [32m[Kffs[m[K

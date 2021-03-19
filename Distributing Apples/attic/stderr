@@ -1,7 +1,0 @@
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Distributing Apples/main.cpp:[m[K In function ‘[01m[Kint nCk(int, int)[m[K’:
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Distributing Apples/main.cpp:45:48:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K%[m[K’ token
-   45 |  return fact[n] * qexp(fact[k], MOD - 2, MOD); [01;31m[K%[m[K MOD * qexp(fact[n - k], MOD - 2, MOD); % MOD;
-      |                                                [01;31m[K^[m[K
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Distributing Apples/main.cpp:45:89:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K%[m[K’ token
-   45 |  return fact[n] * qexp(fact[k], MOD - 2, MOD); % MOD * qexp(fact[n - k], MOD - 2, MOD); [01;31m[K%[m[K MOD;
-      |                                                                                         [01;31m[K^[m[K

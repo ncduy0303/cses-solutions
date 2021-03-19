@@ -1,4 +1,0 @@
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Hamiltonian Flights/main.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Hamiltonian Flights/main.cpp:37:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kv[m[K’ was not declared in this scope
-   37 |         for (int u = 0; u < [01;31m[Kv[m[K; u++) {
-      |                             [01;31m[K^[m[K

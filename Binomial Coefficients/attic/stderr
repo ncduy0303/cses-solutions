@@ -1,6 +1,0 @@
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Binomial Coefficients/main.cpp:35:11:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Klong long int qexp(long long int, long long int, long long int)[m[K’
-   35 | long long [01;31m[Kqexp[m[K(long long A, long long B, long long M) { // calculate (A ^ B) % M
-      |           [01;31m[K^~~~[m[K
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Binomial Coefficients/main.cpp:27:4:[m[K [01;36m[Knote: [m[K‘[01m[Kll qexp(ll, ll, ll)[m[K’ previously defined here
-   27 | ll [01;36m[Kqexp[m[K(ll A, ll B, ll M) {
-      |    [01;36m[K^~~~[m[K

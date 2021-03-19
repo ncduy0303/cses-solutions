@@ -1,59 +1,51 @@
 #include <bits/stdc++.h>
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
 
 using namespace std;
-using namespace __gnu_pbds;
 
-typedef tree<int, null_type, less_equal<int>, rb_tree_tag, tree_order_statistics_node_update> ordered_set;
+#define ar array
+#define ll long long
 
-const int MAX_N = 1e5 + 5;
-const int MAX_L = 20; // ~ Log N
-const long long MOD = 1e9 + 7;
-const long long INF = 1e9 + 7;
-const double EPS = 1e-9;
+const int MAX_N = 1e5 + 1;
+const ll MOD = 1e9 + 7;
+const ll INF = 1e9;
 
-typedef long long ll;
-typedef vector<int> vi;
-typedef pair<int,int> ii;
-typedef vector<ii> vii;
-typedef vector<vi> vvi;
-
-#define LSOne(S) (S & (-S))
-#define isBitSet(S, i) ((S >> i) & 1)
-
-int n, m, par[MAX_N], sz[MAX_N];
-
-int find(int u) {
-    return u == par[u] ? u : par[u] = find(par[u]);
-}
+struct DSU {
+    int num, mx; vector<int> p, sz;
+    DSU(int n) {
+        num = n; mx = 1;
+        p.resize(n); for (int i = 0; i < n; i++) p[i] = i;
+        sz.assign(n, 1);
+    }
+    int find(int u) {return u == p[u] ? u : p[u] = find(p[u]);}
+    bool same(int u, int v) {return find(u) == find(v);}
+    void merge(int u, int v) {
+        u = find(u), v = find(v);
+        if (u == v) return;
+        if (sz[u] > sz[v]) swap(u, v);
+        sz[v] += sz[u];
+        p[u] = v;
+        num--;
+        mx = max(mx, sz[v]);
+    }
+};
 
 void solve() {
-    cin >> n >> m;
-    for (int i = 1; i <= n; i++) par[i] = i, sz[i] = 1;
-    int cnt = n, mx = 1;
-    for (int i = 0; i < m; i++) {
-        int u, v; cin >> u >> v;
-        u = find(u); v = find(v);
-        if (u != v) {
-            cnt--; 
-            par[u] = v;
-            sz[v] += sz[u];
-            mx = max(mx, sz[v]);
-        }
-        cout << cnt << " " << mx << "\n";
-    }
+    int n, m; cin >> n >> m;
+	DSU uf(n);
+	while (m--) {
+		int u, v; cin >> u >> v;
+		if (!uf.same(u, v)) uf.merge(u, v);
+		cout << uf.num << " " << uf.mx << "\n";
+	}
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
-    //freopen("input.txt", "r", stdin);
-    //freopen("output.txt", "w", stdout);
-
-    int tc; tc = 1;
+    int tc = 1;
+    // cin >> tc;
     for (int t = 1; t <= tc; t++) {
-        //cout << "Case #" << t  << ": ";
+        // cout << "Case #" << t  << ": ";
         solve();
     }
 }

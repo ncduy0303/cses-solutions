@@ -1,5 +1,7 @@
 {
-  "mainSolution": {},
+  "mainSolution": {
+    "value": "/mnt/d/CP/CSES - CSES Problem Set/Grid Paths (DP)/main.cpp"
+  },
   "bruteSolution": {},
   "generator": {},
   "checker": {},

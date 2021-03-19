@@ -1,4 +1,0 @@
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Creating Strings II/main.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Creating Strings II/main.cpp:50:51:[m[K [01;31m[Kerror: [m[K‘[01m[Kx[m[K’ was not declared in this scope
-   50 |             (ans *= invf[cnt[x]]) %= MOD; cout << [01;31m[Kx[m[K << "\n";
-      |                                                   [01;31m[K^[m[K

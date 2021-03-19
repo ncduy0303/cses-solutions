@@ -1,97 +1,80 @@
 #include <bits/stdc++.h>
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
 
 using namespace std;
-using namespace __gnu_pbds;
 
-typedef tree<int, null_type, less_equal<int>, rb_tree_tag, tree_order_statistics_node_update> ordered_set;
+#define ar array
+#define ll long long
 
-const int MAX_N = 2e5 + 5;
-const int MAX_L = 20; // ~ Log N
-const long long MOD = 1e9 + 7;
-const long long INF = 1e9 + 7;
-const double EPS = 1e-9;
+const int MAX_N = 2e5 + 1;
+const ll MOD = 1e9 + 7;
+const ll INF = 1e9;
 
-typedef long long ll;
-typedef vector<int> vi;
-typedef pair<int,int> ii;
-typedef vector<ii> vii;
-typedef vector<vi> vvi;
+const int MAX_L = 20;
 
-#define LSOne(S) (S & (-S))
-#define isBitSet(S, i) ((S >> i) & 1)
-
-int n, m, dp[MAX_N][MAX_L], dep[MAX_N], dp2[MAX_N];
-vi adj[MAX_N];
-
+int n, q, par[MAX_N][MAX_L], dep[MAX_N], ans[MAX_N];
+vector<int> adj[MAX_N];
+ 
 void dfs(int u, int p = 0) {
-    dp[u][0] = p;
-    dep[u] = dep[p] + 1;
-    for (int i = 1; i < MAX_L; i++)
-        dp[u][i] = dp[dp[u][i - 1]][i - 1];
+    par[u][0] = p;
+    for (int i = 1; i < MAX_L; i++) 
+        par[u][i] = par[par[u][i - 1]][i - 1];
     for (int v : adj[u]) {
-        if (v != p) {
-            dfs(v, u);
-        }
+        if (v == p) continue;
+        dep[v] = dep[u] + 1;
+        dfs(v, u);
     }
 }
-
-void dfs2(int u, int p = 0) {
-    for (int v : adj[u]) {
-        if (v != p) {
-            dfs2(v, u);
-            dp2[u] += dp2[v];
-        }
-    }
-}
-
+ 
 int ancestor(int u, int k) {
-    for (int i = 0; i < MAX_L && u; i++)
-        if (k & (1 << i))
-            u = dp[u][i];
+    for (int i = 0; i < MAX_L; i++) 
+        if (k & (1 << i)) 
+            u = par[u][i];
     return u;
 }
-
+ 
 int lca(int u, int v) {
     if (dep[u] < dep[v]) swap(u, v);
     u = ancestor(u, dep[u] - dep[v]);
     if (u == v) return u;
     for (int i = MAX_L - 1; i >= 0; i--)
-        if (dp[u][i] != dp[v][i])
-            u = dp[u][i], v = dp[v][i];
-    return dp[u][0];
+        if (par[u][i] != par[v][i])
+            u = par[u][i], v = par[v][i];
+    return par[u][0];
+}
+
+void dfs1(int u, int p = 0) {
+	for (int v : adj[u]) {
+		if (v == p) continue;
+		dfs1(v, u);
+		ans[u] += ans[v];
+	}
 }
 
 void solve() {
-    cin >> n >> m;
-    for (int i = 0; i < n - 1; i++) {
-        int u, v; cin >> u >> v;
-        adj[u].push_back(v);
-        adj[v].push_back(u);
-    }
-    dfs(1);
-    while (m--) {
-        int a, b; cin >> a >> b;
-        int c = lca(a, b);
-        dp2[a]++, dp2[b]++, dp2[c]--;
-        if (c != 1) dp2[dp[c][0]]--;
-    }
-    dfs2(1);
-    for (int i = 1; i <= n; i++) 
-        cout << dp2[i] << " ";
-    cout << "\n";
+    cin >> n >> q;
+	for (int i = 0; i < n - 1; i++) {
+		int u, v; cin >> u >> v;
+		adj[u].push_back(v);
+		adj[v].push_back(u);
+	}
+	dfs(1);
+	while (q--) {
+		int u, v; cin >> u >> v;
+		int m = lca(u, v);
+		ans[u]++; ans[v]++; ans[m]--; ans[par[m][0]]--;
+	}
+	dfs1(1);
+	for (int i = 1; i <= n; i++) cout << ans[i] << " ";
+	cout << "\n";
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
-    //freopen("input.txt", "r", stdin);
-    //freopen("output.txt", "w", stdout);
-
-    int tc; tc = 1;
+    int tc = 1;
+    // cin >> tc;
     for (int t = 1; t <= tc; t++) {
-        //cout << "Case #" << t  << ": ";
+        // cout << "Case #" << t  << ": ";
         solve();
     }
 }

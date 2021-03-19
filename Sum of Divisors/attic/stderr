@@ -1,4 +1,0 @@
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Sum of Divisors/main.cpp:[m[K In function ‘[01m[Kll sum(ll, ll)[m[K’:
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Sum of Divisors/main.cpp:26:20:[m[K [01;31m[Kerror: [m[K‘[01m[KM[m[K’ was not declared in this scope
-   26 |     ll sr = (((r % [01;31m[KM[m[K) * ((r + 1) % M)) / 2) % M;
-      |                    [01;31m[K^[m[K

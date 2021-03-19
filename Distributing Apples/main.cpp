@@ -1,65 +1,49 @@
 #include <bits/stdc++.h>
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
 
 using namespace std;
-using namespace __gnu_pbds;
 
-typedef tree<int, null_type, less_equal<int>, rb_tree_tag, tree_order_statistics_node_update> ordered_set;
+#define ar array
+#define ll long long
 
-const int MAX_N = 2e6 + 5;
-const int MAX_L = 20; // ~ Log N
-const long long MOD = 1e9 + 7;
-const long long INF = 1e9 + 7;
-const double EPS = 1e-9;
+const int MAX_N = 1e5 + 1;
+const ll MOD = 1e9 + 7;
+const ll INF = 1e9;
 
-typedef long long ll;
-typedef vector<int> vi;
-typedef pair<int,int> ii;
-typedef vector<ii> vii;
-typedef vector<vi> vvi;
-
-#define LSOne(S) (S & (-S))
-#define isBitSet(S, i) ((S >> i) & 1)
-
-ll fact[MAX_N], invf[MAX_N];
-
-int qexp(int A, int B, int M) {
-    if (B == 0) return 1;
-    ll half = qexp(A, B / 2, M);
-    (half *= half) %= M;
-    if (B % 2) (half *= A) %= M;
-    return half;
+ll qexp(ll a, ll b, ll m) {
+    ll res = 1;
+    while (b) {
+        if (b % 2) res = res * a % m;
+        a = a * a % m;
+        b /= 2;
+    }
+    return res;
 }
 
-void precompute() {
-    fact[0] = invf[0] = 1;
-    for (int i = 1; i < MAX_N; i++) {
-		fact[i] = fact[i - 1] * i % MOD;
-		// invf[i] = qexp(fact[i], MOD - 2, MOD);
-	}
+vector<ll> fact;
+
+void precompute(int n) {
+    fact.assign(n + 1, 1); 
+    for (int i = 1; i <= n; i++) fact[i] = fact[i - 1] * i % MOD;
 }
 
-int nCk(int n, int k) {
+ll nCk(int n, int k) {
     if (k < 0 || k > n) return 0;
-	return fact[n] * qexp(fact[k], MOD - 2, MOD) % MOD * qexp(fact[n - k], MOD - 2, MOD) % MOD;
-} 
+    return fact[n] * qexp(fact[k], MOD - 2, MOD) % MOD * qexp(fact[n - k], MOD - 2, MOD) % MOD;
+}
 
 void solve() {
     int n, m; cin >> n >> m;
-    cout << nCk(m + n - 1, n - 1) << "\n";
+	cout << nCk(n + m - 1, m) << "\n";
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
-    //freopen("input.txt", "r", stdin);
-    //freopen("output.txt", "w", stdout);
-
-    precompute();
-    int tc; tc = 1;
+    int tc = 1;
+    // cin >> tc;
+    precompute(2e6);
     for (int t = 1; t <= tc; t++) {
-        //cout << "Case #" << t  << ": ";
+        // cout << "Case #" << t  << ": ";
         solve();
     }
 }

@@ -1,4 +1,0 @@
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Longest Palindrome/main.cpp:[m[K In function ‘[01m[Kstd::array<std::vector<int>, 2> manacher(std::string)[m[K’:
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Longest Palindrome/main.cpp:34:54:[m[K [01;31m[Kerror: [m[K‘[01m[KS[m[K’ was not declared in this scope
-   34 |             while (L > 0 && R < n - 1 && s[L - 1] == [01;31m[KS[m[K[R + 1]) p[z][i]++, L--, R++;
-      |                                                      [01;31m[K^[m[K

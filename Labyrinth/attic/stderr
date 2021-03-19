@@ -1,15 +1,4 @@
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Labyrinth/main.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Labyrinth/main.cpp:55:20:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K{[m[K’ token
-   55 |             while ([01;31m[K{[m[Ki, j} != A) { // backtracking
-      |                    [01;31m[K^[m[K
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Labyrinth/main.cpp:55:20:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K{[m[K’ token
-   55 |             while [34m[K([m[K[01;31m[K{[m[Ki, j} != A) { // backtracking
-      |                   [34m[K~[m[K[01;31m[K^[m[K
-      |                    [32m[K)[m[K
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Labyrinth/main.cpp:55:25:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
-   55 |             while ({i, j[01;31m[K}[m[K != A) { // backtracking
-      |                         [01;31m[K^[m[K
-      |                         [32m[K;[m[K
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Labyrinth/main.cpp:55:27:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K!=[m[K’ token
-   55 |             while ({i, j} [01;31m[K!=[m[K A) { // backtracking
-      |                           [01;31m[K^~[m[K
+[01m[K/mnt/d/CP/CSES - CSES Problem Set/Labyrinth/main.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
+[01m[K/mnt/d/CP/CSES - CSES Problem Set/Labyrinth/main.cpp:53:12:[m[K [01;31m[Kerror: [m[Kreturn-statement with a value, in function returning ‘[01m[Kvoid[m[K’ [[01;31m[K-fpermissive[m[K]
+   53 |     return [01;31m[K0[m[K;
+      |            [01;31m[K^[m[K

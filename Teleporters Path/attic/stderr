@@ -1,6 +1,0 @@
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Teleporters Path/main.cpp:36:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kans[m[K’ does not name a type
-   36 |     [01;31m[Kans[m[K.push_back(u);
-      |     [01;31m[K^~~[m[K
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Teleporters Path/main.cpp:37:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
-   37 | [01;31m[K}[m[K
-      | [01;31m[K^[m[K

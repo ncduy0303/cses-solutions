@@ -1,9 +1,7 @@
 {
     "files.associations": {
-        "iostream": "cpp",
-        "random": "cpp",
-        "array": "cpp",
         "any": "cpp",
+        "array": "cpp",
         "atomic": "cpp",
         "bit": "cpp",
         "*.tcc": "cpp",
@@ -46,6 +44,7 @@
         "memory_resource": "cpp",
         "numeric": "cpp",
         "optional": "cpp",
+        "random": "cpp",
         "ratio": "cpp",
         "regex": "cpp",
         "string": "cpp",
@@ -59,6 +58,7 @@
         "initializer_list": "cpp",
         "iomanip": "cpp",
         "iosfwd": "cpp",
+        "iostream": "cpp",
         "istream": "cpp",
         "limits": "cpp",
         "mutex": "cpp",
@@ -74,6 +74,5 @@
         "typeinfo": "cpp",
         "valarray": "cpp",
         "variant": "cpp"
-    },
-    "C_Cpp.errorSquiggles": "Disabled"
+    }
 }

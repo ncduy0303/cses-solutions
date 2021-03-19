@@ -1,7 +1,0 @@
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Distinct Values Queries/main.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Distinct Values Queries/main.cpp:84:28:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
-   84 |         else arr[i] = mp[i]
-      |                            [01;31m[K^[m[K
-      |                            [32m[K;[m[K
-   85 |     [32m[K}[m[K
-      |     [32m[K~[m[K                       

@@ -1,7 +1,0 @@
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Road Reparation/main.cpp:[m[K In function ‘[01m[Kvoid unite(int, int)[m[K’:
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Road Reparation/main.cpp:33:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kx[m[K’ was not declared in this scope
-   33 |     par[find([01;31m[Kx[m[K)] = find(y);
-      |              [01;31m[K^[m[K
-[01m[K/mnt/e/Compeitive Programming/CSES - CSES Problem Set/Road Reparation/main.cpp:33:25:[m[K [01;31m[Kerror: [m[K‘[01m[Ky[m[K’ was not declared in this scope
-   33 |     par[find(x)] = find([01;31m[Ky[m[K);
-      |                         [01;31m[K^[m[K
