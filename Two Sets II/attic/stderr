@@ -1,4 +1,0 @@
-[01m[K/mnt/d/CP/CSES - CSES Problem Set/Two Sets II/main.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
-[01m[K/mnt/d/CP/CSES - CSES Problem Set/Two Sets II/main.cpp:18:16:[m[K [01;31m[Kerror: [m[Kreturn-statement with a value, in function returning ‘[01m[Kvoid[m[K’ [[01;31m[K-fpermissive[m[K]
-   18 |         return [01;31m[K0[m[K;
-      |                [01;31m[K^[m[K

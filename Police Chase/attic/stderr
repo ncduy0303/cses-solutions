@@ -1,8 +1,0 @@
-[01m[K/mnt/d/CP/CSES - CSES Problem Set/Police Chase/main.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
-[01m[K/mnt/d/CP/CSES - CSES Problem Set/Police Chase/main.cpp:105:20:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmax_flow_graph::add_edge(int&, int&)[m[K’
-  105 |   adj.add_edge(u, v[01;31m[K)[m[K;
-      |                    [01;31m[K^[m[K
-[01m[K/mnt/d/CP/CSES - CSES Problem Set/Police Chase/main.cpp:21:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid max_flow_graph::add_edge(int, int, int)[m[K’
-   21 |     void [01;36m[Kadd_edge[m[K(int u, int v, int w) {
-      |          [01;36m[K^~~~~~~~[m[K
-[01m[K/mnt/d/CP/CSES - CSES Problem Set/Police Chase/main.cpp:21:10:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided

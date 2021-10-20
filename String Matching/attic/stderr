@@ -1,7 +1,0 @@
-[01m[K/mnt/d/CP/CSES - CSES Problem Set/String Matching/main.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
-[01m[K/mnt/d/CP/CSES - CSES Problem Set/String Matching/main.cpp:47:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct Hash[m[K’ has no member named ‘[01m[Kget[m[K’
-   47 |         ans += Hs.[01;31m[Kget[m[K(l, r) == Ht.get(0, m - 1);
-      |                   [01;31m[K^~~[m[K
-[01m[K/mnt/d/CP/CSES - CSES Problem Set/String Matching/main.cpp:47:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct Hash[m[K’ has no member named ‘[01m[Kget[m[K’
-   47 |         ans += Hs.get(l, r) == Ht.[01;31m[Kget[m[K(0, m - 1);
-      |                                   [01;31m[K^~~[m[K

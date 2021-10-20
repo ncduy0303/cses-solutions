@@ -1,4 +1,0 @@
-[01m[K/mnt/d/CP/CSES - CSES Problem Set/Giant Pizza/main.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
-[01m[K/mnt/d/CP/CSES - CSES Problem Set/Giant Pizza/main.cpp:76:11:[m[K [01;31m[Kerror: [m[Kreturn-statement with a value, in function returning ‘[01m[Kvoid[m[K’ [[01;31m[K-fpermissive[m[K]
-   76 |    return [01;31m[K0[m[K;
-      |           [01;31m[K^[m[K
