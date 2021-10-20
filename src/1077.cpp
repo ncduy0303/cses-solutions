@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
- 
+
 using namespace std;
- 
+
 #define print_op(...) ostream& operator<<(ostream& out, const __VA_ARGS__& u)
 template<typename A, typename B> print_op(pair<A, B>) { return out << "(" << u.first << ", " << u.second << ")"; }
 template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> print_op(T_container) { out << "{"; string sep; for (const T &x : u) out << sep << x, sep = ", "; return out << "}"; }
@@ -13,42 +13,50 @@ if (s[i] == ')' || s[i] == '}') b--; else if (s[i] == ',' && b == 0) {cerr << "\
 #else
 #define dbg(...)
 #endif
- 
+
 #define ar array
 #define ll long long
 #define ld long double
 #define sz(x) ((int)x.size())
 #define rep(i, a, b) for (int i = (int)(a); i < (int)(b); i++) 
 #define all(a) (a).begin(), (a).end()
- 
+
 const int MAX_N = 1e5 + 5;
 const int MAX_L = 20;
 const int MAX_C = 26;
 const ll MOD = 1e9 + 7;
 const ll INF = 1e9;
 const ld EPS = 1e-9;
- 
-// generate all subsets using bitmask
+
+// sliding window
+
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
+using namespace __gnu_pbds;
+template <class T> using ordered_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
  
 void solve(int tc = 0) {
-    int n; cin >> n;
+    int n, m; cin >> n >> m;
     vector<int> a(n);
     for (int &x : a) cin >> x;
-    ll ans = LLONG_MAX;
-    for (int mask = 0; mask < (1 << n); mask++) {
-        ll s1 = 0, s2 = 0;
-        for (int i = 0; i < n; i++) {
-            if (mask & (1 << i)) {
-                s1 += a[i];
-            } else {
-                s2 += a[i];
-            }
-        }
-        ans = min(ans, abs(s1 - s2));
+    ordered_set<ar<int,2>> os;
+    for (int i = 0; i < m; i++) os.insert({a[i], i});
+    int med = (*os.find_by_order((m - 1) / 2))[0];    
+    ll ans = 0;
+    for (int i = 0; i < m; i++) ans += abs(a[i] - med);
+    cout << ans << " ";
+    for (int l = 0, r = m; r < n; l++, r++) {
+        os.insert({a[r], r});
+        os.erase({a[l], l});
+        int nmed = (*os.find_by_order((m - 1) / 2))[0];
+        ans += abs(a[r] - nmed) - abs(a[l] - med);
+        if (m % 2 == 0) ans += (med - nmed);
+        med = nmed;
+        cout << ans << " ";
     }
-    cout << ans << "\n";
+    cout << "\n";
 }
- 
+
 signed main() {
     ios_base::sync_with_stdio(false); cin.tie(NULL);
     int tc = 1;

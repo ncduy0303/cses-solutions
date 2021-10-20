@@ -28,7 +28,7 @@ const ll MOD = 1e9 + 7;
 const ll INF = 1e9;
 const ld EPS = 1e-9;
 
-// Simple palindrome construction
+// simple palindrome construction
 
 void solve(int tc = 0) {
     string s; cin >> s;

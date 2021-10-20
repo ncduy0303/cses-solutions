@@ -28,7 +28,7 @@ const ll MOD = 1e9 + 7;
 const ll INF = 1e9;
 const ld EPS = 1e-9;
  
-// Backtracking
+// backtracking
 
 void backtrack(int s, int e, int m, int n) {
     if (n == 1) {
@@ -46,7 +46,7 @@ void solve(int tc = 0) {
     backtrack(1, 3, 2, n);
 }
  
-int main() {
+signed main() {
     ios_base::sync_with_stdio(false); cin.tie(NULL);
     int tc = 1;
     // cin >> tc;

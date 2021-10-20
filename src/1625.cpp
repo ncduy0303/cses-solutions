@@ -28,7 +28,7 @@ const ll MOD = 1e9 + 7;
 const ll INF = 1e9;
 const ld EPS = 1e-9;
 
-// Bruteforce with a smart pruning strategy: if the cell in front is bad, and both the cells to the left and right are good, then it's impossible to complete
+// bruteforce with a smart pruning strategy: if the cell in front is bad, and both the cells to the left and right are good, then it's impossible to complete
 
 const int n = 7;
  
@@ -60,7 +60,7 @@ void solve(int tc = 0) {
     cout << ans << "\n";
 }
  
-int main() {
+signed main() {
     ios_base::sync_with_stdio(false); cin.tie(NULL);
     int tc = 1;
     // cin >> tc;

@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
- 
+
 using namespace std;
- 
+
 #define print_op(...) ostream& operator<<(ostream& out, const __VA_ARGS__& u)
 template<typename A, typename B> print_op(pair<A, B>) { return out << "(" << u.first << ", " << u.second << ")"; }
 template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> print_op(T_container) { out << "{"; string sep; for (const T &x : u) out << sep << x, sep = ", "; return out << "}"; }
@@ -13,42 +13,49 @@ if (s[i] == ')' || s[i] == '}') b--; else if (s[i] == ',' && b == 0) {cerr << "\
 #else
 #define dbg(...)
 #endif
- 
+
 #define ar array
 #define ll long long
 #define ld long double
 #define sz(x) ((int)x.size())
 #define rep(i, a, b) for (int i = (int)(a); i < (int)(b); i++) 
 #define all(a) (a).begin(), (a).end()
- 
+
 const int MAX_N = 1e5 + 5;
 const int MAX_L = 20;
 const int MAX_C = 26;
 const ll MOD = 1e9 + 7;
 const ll INF = 1e9;
 const ld EPS = 1e-9;
- 
-// generate all subsets using bitmask
- 
+
+// two pointers
+
 void solve(int tc = 0) {
-    int n; cin >> n;
-    vector<int> a(n);
-    for (int &x : a) cin >> x;
-    ll ans = LLONG_MAX;
-    for (int mask = 0; mask < (1 << n); mask++) {
-        ll s1 = 0, s2 = 0;
-        for (int i = 0; i < n; i++) {
-            if (mask & (1 << i)) {
-                s1 += a[i];
-            } else {
-                s2 += a[i];
+    int n, m; cin >> n >> m;
+    vector<ar<int,2>> a(n);
+    for (int i = 0; i < n; i++) {
+        int x; cin >> x;
+        a[i] = {x, i + 1};
+    }
+    sort(all(a));
+    for (int i = 0; i < n; i++) {
+        for (int j = i + 1; j < n; j++) {
+            int sum = m - a[i][0] - a[j][0];
+            for (int l = j + 1, r = n - 1; l < r;) {
+                if (a[l][0] + a[r][0] == sum) {
+                    cout << a[i][1] << " " << a[j][1] << " " << a[l][1] << " " << a[r][1] << "\n";
+                    return;
+                } else if (a[l][0] + a[r][0] < sum) {
+                    l++;
+                } else {
+                    r--;
+                }
             }
         }
-        ans = min(ans, abs(s1 - s2));
     }
-    cout << ans << "\n";
+    cout << "IMPOSSIBLE\n";
 }
- 
+
 signed main() {
     ios_base::sync_with_stdio(false); cin.tie(NULL);
     int tc = 1;

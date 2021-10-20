@@ -28,7 +28,7 @@ const ll MOD = 1e9 + 7;
 const ll INF = 1e9;
 const ld EPS = 1e-9;
  
-// Just generate all permutations using next_permutation function 
+// generate all permutations using next_permutation function 
  
 void solve(int tc = 0) {
     string s; cin >> s;
@@ -41,7 +41,7 @@ void solve(int tc = 0) {
     for (string x : ans) cout << x << "\n";
 }
  
-int main() {
+signed main() {
     ios_base::sync_with_stdio(false); cin.tie(NULL);
     int tc = 1;
     // cin >> tc;
