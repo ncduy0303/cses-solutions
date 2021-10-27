@@ -251,32 +251,32 @@
 | [Convex Hull](https://cses.fi/problemset/task/2195/)                | [2195.cpp](src/2195.cpp) |
 
 ## Advanced Techniques
-| Name                                                          | Solution |
-| ------------------------------------------------------------- | -------- |
-| [Meet in the Middle](https://cses.fi/problemset/task/1628/)   |          |
-| [Hamming Distance](https://cses.fi/problemset/task/2136/)     |          |
-| [Beautiful Subgrids](https://cses.fi/problemset/task/2137/)   |          |
-| [Reachable Nodes](https://cses.fi/problemset/task/2138/)      |          |
-| [Reachability Queries](https://cses.fi/problemset/task/2143/) |          |
-| [Cut and Paste](https://cses.fi/problemset/task/2072/)        |          |
-| [Substring Reversals](https://cses.fi/problemset/task/2073/)  |          |
-| [Reversals and Sums](https://cses.fi/problemset/task/2074/)   |          |
-| [Necessary Roads](https://cses.fi/problemset/task/2076/)      |          |
-| [Necessary Cities](https://cses.fi/problemset/task/2077/)     |          |
-| [Eulerian Subgraphs](https://cses.fi/problemset/task/2078/)   |          |
-| [Monster Game I](https://cses.fi/problemset/task/2084/)       |          |
-| [Monster Game II](https://cses.fi/problemset/task/2085/)      |          |
-| [Subarray Squares](https://cses.fi/problemset/task/2086/)     |          |
-| [Houses and Schools](https://cses.fi/problemset/task/2087/)   |          |
-| [Knuth Division](https://cses.fi/problemset/task/2088/)       |          |
-| [Apples and Bananas](https://cses.fi/problemset/task/2111/)   |          |
-| [One Bit Positions](https://cses.fi/problemset/task/2112/)    |          |
-| [Signal Processing](https://cses.fi/problemset/task/2113/)    |          |
-| [New Roads Queries](https://cses.fi/problemset/task/2101/)    |          |
-| [Dynamic Connectivity](https://cses.fi/problemset/task/2133/) |          |
-| [Parcel Delivery](https://cses.fi/problemset/task/2121/)      |          |
-| [Task Assignment](https://cses.fi/problemset/task/2129/)      |          |
-| [Distinct Routes II](https://cses.fi/problemset/task/2130/)   |          |
+| Name                                                          | Solution                 |
+| ------------------------------------------------------------- | ------------------------ |
+| [Meet in the Middle](https://cses.fi/problemset/task/1628/)   | [1628.cpp](src/1628.cpp) |
+| [Hamming Distance](https://cses.fi/problemset/task/2136/)     | [2136.cpp](src/2136.cpp) |
+| [Beautiful Subgrids](https://cses.fi/problemset/task/2137/)   | [2137.cpp](src/2137.cpp) |
+| [Reachable Nodes](https://cses.fi/problemset/task/2138/)      | [2138.cpp](src/2138.cpp) |
+| [Reachability Queries](https://cses.fi/problemset/task/2143/) | [2143.cpp](src/2143.cpp) |
+| [Cut and Paste](https://cses.fi/problemset/task/2072/)        | [2072.cpp](src/2072.cpp) |
+| [Substring Reversals](https://cses.fi/problemset/task/2073/)  | [2073.cpp](src/2073.cpp) |
+| [Reversals and Sums](https://cses.fi/problemset/task/2074/)   | [2074.cpp](src/2074.cpp) |
+| [Necessary Roads](https://cses.fi/problemset/task/2076/)      | [2076.cpp](src/2076.cpp) |
+| [Necessary Cities](https://cses.fi/problemset/task/2077/)     | [2077.cpp](src/2077.cpp) |
+| [Eulerian Subgraphs](https://cses.fi/problemset/task/2078/)   | [2078.cpp](src/2078.cpp) |
+| [Monster Game I](https://cses.fi/problemset/task/2084/)       | [2084.cpp](src/2084.cpp) |
+| [Monster Game II](https://cses.fi/problemset/task/2085/)      | [2085.cpp](src/2085.cpp) |
+| [Subarray Squares](https://cses.fi/problemset/task/2086/)     | [2086.cpp](src/2086.cpp) |
+| [Houses and Schools](https://cses.fi/problemset/task/2087/)   | [2087.cpp](src/2087.cpp) |
+| [Knuth Division](https://cses.fi/problemset/task/2088/)       | [2088.cpp](src/2088.cpp) |
+| [Apples and Bananas](https://cses.fi/problemset/task/2111/)   | [2111.cpp](src/2111.cpp) |
+| [One Bit Positions](https://cses.fi/problemset/task/2112/)    | [2112.cpp](src/2112.cpp) |
+| [Signal Processing](https://cses.fi/problemset/task/2113/)    | [2113.cpp](src/2113.cpp) |
+| [New Roads Queries](https://cses.fi/problemset/task/2101/)    | [2101.cpp](src/2101.cpp) |
+| [Dynamic Connectivity](https://cses.fi/problemset/task/2133/) | [2133.cpp](src/2133.cpp) |
+| [Parcel Delivery](https://cses.fi/problemset/task/2121/)      | [2121.cpp](src/2121.cpp) |
+| [Task Assignment](https://cses.fi/problemset/task/2129/)      | [2129.cpp](src/2129.cpp) |
+| [Distinct Routes II](https://cses.fi/problemset/task/2130/)   | [2130.cpp](src/2130.cpp) |
 
 ## Additional Problems
 | Name                                                                   | Solution |
